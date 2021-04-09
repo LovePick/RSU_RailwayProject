@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'RailWay03' do
+    pod 'Socket.IO-Client-Swift'
+    pod 'RealmSwift'
+end

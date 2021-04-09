@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>time table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 13px Helvetica, Arial;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Arrived</h1>
+        <div id="game">
+            <p>Test</p>
+            <input type="text" id="car-input" placeholder="Enter Car name">
+            <input type="text" id="station-input" placeholder="Enter Station ID">
+
+            <input type="submit" value="Submit" id="guess-btn">
+            <p class="message"></p>
+        </div>
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <script>
+
+        const game = document.querySelector('#game'),
+            guessBtn = document.querySelector("#guess-btn"),
+            carInput = document.querySelector("#car-input"),
+            stationInput = document.querySelector("#station-input");
+
+
+        guessBtn.addEventListener('click', function () {
+
+
+
+            let strURL = `http://localhost:5000/arrived?carId=${carInput.value}&stationId=${stationInput.value}`;
+            // sentArrivedWith(carInput.value, stationInput.value);
+
+            console.log(strURL);
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", strURL, false); // false for synchronous request
+            xmlHttp.send(null);
+            // return xmlHttp.responseText;
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TimeTableDetailCell" customModule="RailWay03" customModuleProvider="target">
+            <connections>
+                <outlet property="arrive" destination="EXz-t6-XMe" id="TZG-Tg-0ra"/>
+                <outlet property="btPath" destination="qxs-pY-33T" id="V0k-Im-0DS"/>
+                <outlet property="lbToStation" destination="6pE-wA-r8i" id="Mbr-Hh-2bC"/>
+                <outlet property="tfDewell" destination="g8O-CU-sbZ" id="oK3-6W-yjJ"/>
+                <outlet property="tfDuration" destination="a1n-aP-2zv" id="Mpn-ml-QUB"/>
+                <outlet property="viLine" destination="Ag2-N0-r9k" id="HVv-Ti-5bt"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="576" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g8O-CU-sbZ">
+                    <rect key="frame" x="357" y="20" width="44" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="1Qo-8C-vvy"/>
+                        <constraint firstAttribute="width" constant="44" id="SMZ-KI-WxN"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="A5O-hu-7IH">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="vgA-Ac-QnW"/>
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-t6-XMe">
+                    <rect key="frame" x="269" y="19" width="83" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="VdT-Dz-8vi"/>
+                        <constraint firstAttribute="height" constant="23" id="bro-mX-j6S"/>
+                    </constraints>
+                    <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="Cbf-52-Ofk">
+                        <font key="font" metaFont="system"/>
+                        <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                            <!--1982-02-12 16:00:00 +0000-->
+                        </date>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
+                    </datePickerCell>
+                    <connections>
+                        <action selector="arriveDateChange:" target="-2" id="FLx-yx-MCs"/>
+                    </connections>
+                </datePicker>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-pY-33T">
+                    <rect key="frame" x="48" y="17" width="214" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="4fK-FM-BtC"/>
+                    </constraints>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="FCX-CO-s7C" id="TMQ-jX-s6g">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <menu key="menu" id="BoO-qW-9q7">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="FCX-CO-s7C"/>
+                                <menuItem title="Item 2" id="b3x-PW-N0c"/>
+                                <menuItem title="Item 3" id="WgY-QT-5yV"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="tapOnPath:" target="-2" id="gFG-re-7nT"/>
+                    </connections>
+                </popUpButton>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-N0-r9k">
+                    <rect key="frame" x="0.0" y="0.0" width="576" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rRE-xQ-4tz"/>
+                    </constraints>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-wA-r8i">
+                    <rect key="frame" x="459" y="23" width="69" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="rgd-mI-9nU"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="vah-Zf-bkw">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a1n-aP-2zv">
+                    <rect key="frame" x="409" y="20" width="44" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="Zyq-Uf-39O"/>
+                        <constraint firstAttribute="width" constant="44" id="mS0-Lb-C3X"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="cmS-CI-sFZ">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Frw-yA-Fdh"/>
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="EXz-t6-XMe" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="1TI-cV-3FD"/>
+                <constraint firstItem="g8O-CU-sbZ" firstAttribute="leading" secondItem="EXz-t6-XMe" secondAttribute="trailing" constant="8" id="82r-yG-A9x"/>
+                <constraint firstItem="Ag2-N0-r9k" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="9v0-rS-vyE"/>
+                <constraint firstItem="g8O-CU-sbZ" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Bmd-Zy-VJg"/>
+                <constraint firstItem="6pE-wA-r8i" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Eaf-Iq-Arx"/>
+                <constraint firstAttribute="bottom" secondItem="Ag2-N0-r9k" secondAttribute="bottom" id="G6m-Kc-TFj"/>
+                <constraint firstItem="a1n-aP-2zv" firstAttribute="leading" secondItem="g8O-CU-sbZ" secondAttribute="trailing" constant="8" id="K78-bR-5kT"/>
+                <constraint firstItem="a1n-aP-2zv" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="M7k-Aw-kFg"/>
+                <constraint firstItem="EXz-t6-XMe" firstAttribute="leading" secondItem="qxs-pY-33T" secondAttribute="trailing" constant="10" id="aIc-9U-TP3"/>
+                <constraint firstItem="qxs-pY-33T" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="50" id="czf-17-hkx"/>
+                <constraint firstAttribute="trailing" secondItem="6pE-wA-r8i" secondAttribute="trailing" constant="50" id="ipx-zM-cOm"/>
+                <constraint firstItem="6pE-wA-r8i" firstAttribute="leading" secondItem="a1n-aP-2zv" secondAttribute="trailing" constant="8" id="jKO-mC-n3R"/>
+                <constraint firstItem="qxs-pY-33T" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="kkh-g9-zlm"/>
+                <constraint firstAttribute="trailing" secondItem="Ag2-N0-r9k" secondAttribute="trailing" id="vDM-To-YfS"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="48.5"/>
+        </customView>
+        <customObject id="cES-cq-c9a" customClass="TimeTableDetailCell" customModule="RailWay03" customModuleProvider="target"/>
+    </objects>
+</document>

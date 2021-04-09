@@ -1,0 +1,831 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03BF4F2A231062840027F921 /* SaveMapDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF4F29231062840027F921 /* SaveMapDataModel.swift */; };
+		03BF4F2C231063060027F921 /* TileCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF4F2B231063060027F921 /* TileCellDataModel.swift */; };
+		56A9CB0287D6E7D5D1EA15DF /* Pods_RailWay03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1B8487C0818E1902903F20 /* Pods_RailWay03.framework */; };
+		AC06985A2318DA360085E4B2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AC0698592318DA360085E4B2 /* Podfile */; };
+		AC06985C2318DC5D0085E4B2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06985B2318DC5D0085E4B2 /* Service.swift */; };
+		AC06C1D6230BA250006B32E4 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06C1D5230BA250006B32E4 /* ShareData.swift */; };
+		AC06C1D8230BA9C1006B32E4 /* TouchEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06C1D7230BA9C1006B32E4 /* TouchEventModel.swift */; };
+		AC06C287230BF50A006B32E4 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06C286230BF50A006B32E4 /* ViewControllerModel.swift */; };
+		AC06C28C230C0CD8006B32E4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06C28B230C0CD8006B32E4 /* GameView.swift */; };
+		AC079B58230FCFB000A5E802 /* CarsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC079B57230FCFB000A5E802 /* CarsListView.swift */; };
+		AC079B5B230FD11000A5E802 /* CarDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC079B5A230FD11000A5E802 /* CarDataModel.swift */; };
+		AC079B5E230FD19E00A5E802 /* CarsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC079B5C230FD19E00A5E802 /* CarsCell.swift */; };
+		AC079B5F230FD19E00A5E802 /* CarsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC079B5D230FD19E00A5E802 /* CarsCell.xib */; };
+		AC0990FD2345F3BD00CB5A76 /* CarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0990FC2345F3BD00CB5A76 /* CarNode.swift */; };
+		AC099AB3230D1CF6009E70CA /* TileCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC099AB2230D1CF6009E70CA /* TileCollectionNode.swift */; };
+		AC09A04F234B37C9007A7063 /* ActivePathModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09A04E234B37C9007A7063 /* ActivePathModel.swift */; };
+		AC0B643F23100AB100E90C5F /* CarsListViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B643E23100AB100E90C5F /* CarsListViewDataModel.swift */; };
+		AC124A3E23166C8D00D14C29 /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC124A3D23166C8D00D14C29 /* TimeTableView.swift */; };
+		AC124A41231694B400D14C29 /* TimeTableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC124A40231694B400D14C29 /* TimeTableListView.swift */; };
+		AC124A432316983200D14C29 /* TimeTableDetailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC124A422316983200D14C29 /* TimeTableDetailListView.swift */; };
+		AC124A4623169AB100D14C29 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC124A4423169AB100D14C29 /* TimeTableCell.swift */; };
+		AC124A4723169AB100D14C29 /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC124A4523169AB100D14C29 /* TimeTableCell.xib */; };
+		AC4202BF2313DF6C00830155 /* PathEditerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4202BE2313DF6C00830155 /* PathEditerModel.swift */; };
+		AC4202C12313DFD100830155 /* PathDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4202C02313DFD100830155 /* PathDataModel.swift */; };
+		AC4FDA1E23AC7928000D4F1E /* ViewController+CarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4FDA1D23AC7928000D4F1E /* ViewController+CarList.swift */; };
+		AC4FDA2023AC7BF0000D4F1E /* ViewController+PathList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4FDA1F23AC7BF0000D4F1E /* ViewController+PathList.swift */; };
+		AC4FDA2223ACD8D1000D4F1E /* CarTrainLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4FDA2123ACD8D1000D4F1E /* CarTrainLabelNode.swift */; };
+		AC500CC623EBD33D00A5235F /* TimeTableDatailV2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC500CC423EBD33D00A5235F /* TimeTableDatailV2Cell.swift */; };
+		AC500CC723EBD33D00A5235F /* TimeTableDatailV2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC500CC523EBD33D00A5235F /* TimeTableDatailV2Cell.xib */; };
+		AC501A5123FB968600E60DE0 /* TimeTableRoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC501A4F23FB968600E60DE0 /* TimeTableRoutineCell.swift */; };
+		AC501A5223FB968600E60DE0 /* TimeTableRoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC501A5023FB968600E60DE0 /* TimeTableRoutineCell.xib */; };
+		AC50242323C463A800FDB921 /* ViewController+TrackDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50242223C463A800FDB921 /* ViewController+TrackDisplay.swift */; };
+		AC52490E23FA881D0054F526 /* TimeTableRoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52490D23FA881D0054F526 /* TimeTableRoutineModel.swift */; };
+		AC52491023FA9AB80054F526 /* TimeTableRoutineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52490F23FA9AB80054F526 /* TimeTableRoutineListView.swift */; };
+		AC52491223FA9C840054F526 /* TimeTableRoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52491123FA9C840054F526 /* TimeTableRoutineViewModel.swift */; };
+		AC535C6C23DFFBFA00E02270 /* ViewController+Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC535C6B23DFFBFA00E02270 /* ViewController+Routine.swift */; };
+		AC535C6E23E0515100E02270 /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC535C6D23E0515100E02270 /* RoutineView.swift */; };
+		AC5585DB23FA3F2E00D632CF /* TimeTableDetailRoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5585DA23FA3F2E00D632CF /* TimeTableDetailRoutsView.swift */; };
+		AC5585DD23FA405600D632CF /* RoutineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5585DC23FA405600D632CF /* RoutineDataModel.swift */; };
+		AC57D1F823B07E00007AF7E5 /* StrokeLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57D1F723B07E00007AF7E5 /* StrokeLabelNode.swift */; };
+		AC71B3502314E27500C64A8E /* PathListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71B34F2314E27500C64A8E /* PathListView.swift */; };
+		AC71B3532314EBC400C64A8E /* AleartCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71B3522314EBC400C64A8E /* AleartCenter.swift */; };
+		AC71B3562314F17900C64A8E /* PathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71B3542314F17900C64A8E /* PathCell.swift */; };
+		AC71B3572314F17900C64A8E /* PathCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC71B3552314F17900C64A8E /* PathCell.xib */; };
+		AC78E79A230E499D007AD5AF /* FucntionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78E799230E499D007AD5AF /* FucntionHelper.swift */; };
+		AC78E79C230E73C3007AD5AF /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78E79B230E73C3007AD5AF /* PropertyViewModel.swift */; };
+		AC8415F723C5CF99003CDF3C /* Coordinater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8415F623C5CF99003CDF3C /* Coordinater.swift */; };
+		AC98577C234F3ED5006504C6 /* CarTimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98577A234F3ED5006504C6 /* CarTimeTableCell.swift */; };
+		AC98577D234F3ED5006504C6 /* CarTimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC98577B234F3ED5006504C6 /* CarTimeTableCell.xib */; };
+		ACA311EE230A5F79007F6109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA311ED230A5F79007F6109 /* AppDelegate.swift */; };
+		ACA311F0230A5F79007F6109 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACA311EF230A5F79007F6109 /* GameScene.sks */; };
+		ACA311F4230A5F79007F6109 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA311F3230A5F79007F6109 /* GameScene.swift */; };
+		ACA311F6230A5F79007F6109 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA311F5230A5F79007F6109 /* ViewController.swift */; };
+		ACA311F8230A5F7A007F6109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA311F7230A5F7A007F6109 /* Assets.xcassets */; };
+		ACA311FB230A5F7A007F6109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA311F9230A5F7A007F6109 /* Main.storyboard */; };
+		ACA31204230A68B3007F6109 /* TileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA31203230A68B3007F6109 /* TileCell.swift */; };
+		ACA31206230A7EDA007F6109 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA31205230A7EDA007F6109 /* GameModel.swift */; };
+		ACAA73FF231782610049A258 /* TimeTableDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA73FD231782610049A258 /* TimeTableDetailCell.swift */; };
+		ACAA7400231782610049A258 /* TimeTableDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAA73FE231782610049A258 /* TimeTableDetailCell.xib */; };
+		ACAA7402231794650049A258 /* TimeTableDetailDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA7401231794650049A258 /* TimeTableDetailDataModel.swift */; };
+		ACAA740423179AE00049A258 /* TimeTableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA740323179AE00049A258 /* TimeTableDataModel.swift */; };
+		ACAA74062317B1100049A258 /* TimeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA74052317B1100049A258 /* TimeTableViewModel.swift */; };
+		C10A416E24A09F19008C51BB /* RealmDataRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10A416D24A09F19008C51BB /* RealmDataRecordModel.swift */; };
+		C13261152484BC2E005515B0 /* ViewController+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13261142484BC2E005515B0 /* ViewController+Server.swift */; };
+		C132611D24850D89005515B0 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C132611C24850D89005515B0 /* Preferences.storyboard */; };
+		C132611F24850E24005515B0 /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132611E24850E24005515B0 /* PreferenceWindowController.swift */; };
+		C132612124852E97005515B0 /* PreferenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132612024852E97005515B0 /* PreferenceVC.swift */; };
+		C150CD4724430A1400CB2177 /* ScheduleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C150CD4624430A1400CB2177 /* ScheduleDetailModel.swift */; };
+		C150CD492443120600CB2177 /* CarScheduleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C150CD482443120600CB2177 /* CarScheduleDetailModel.swift */; };
+		C1594EDF2615880F00E5C9E0 /* Usermanual_TH.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C1594EDE2615880F00E5C9E0 /* Usermanual_TH.pdf */; };
+		C15D22AD24CECA8D000CA8FD /* defaultMap.rmap in Resources */ = {isa = PBXBuildFile; fileRef = C15D22AC24CECA8D000CA8FD /* defaultMap.rmap */; };
+		C16BB3FE261FF62000402B44 /* CarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BB3FD261FF62000402B44 /* CarsController.swift */; };
+		C1774B722466B6090085A159 /* ViewController+CarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1774B712466B6090085A159 /* ViewController+CarControll.swift */; };
+		C18AD6D3257E0E7F00A2A921 /* CarControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AD6D1257E0E7F00A2A921 /* CarControllerCell.swift */; };
+		C18AD6D4257E0E7F00A2A921 /* CarControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AD6D2257E0E7F00A2A921 /* CarControllerCell.xib */; };
+		C1D7628D2477D68900BCCFFD /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D7628C2477D68900BCCFFD /* DatabaseService.swift */; };
+		C1F4A7D02456EDE0008F0CAB /* StationScheduleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4A7CF2456EDE0008F0CAB /* StationScheduleDataModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03BF4F29231062840027F921 /* SaveMapDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMapDataModel.swift; sourceTree = "<group>"; };
+		03BF4F2B231063060027F921 /* TileCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCellDataModel.swift; sourceTree = "<group>"; };
+		4F1B8487C0818E1902903F20 /* Pods_RailWay03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailWay03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E578E49CEB9F026929E739 /* Pods-RailWay03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailWay03.release.xcconfig"; path = "Target Support Files/Pods-RailWay03/Pods-RailWay03.release.xcconfig"; sourceTree = "<group>"; };
+		AC0698592318DA360085E4B2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC06985B2318DC5D0085E4B2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		AC06C1D5230BA250006B32E4 /* ShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
+		AC06C1D7230BA9C1006B32E4 /* TouchEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEventModel.swift; sourceTree = "<group>"; };
+		AC06C286230BF50A006B32E4 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		AC06C28B230C0CD8006B32E4 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		AC079B57230FCFB000A5E802 /* CarsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListView.swift; sourceTree = "<group>"; };
+		AC079B5A230FD11000A5E802 /* CarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataModel.swift; sourceTree = "<group>"; };
+		AC079B5C230FD19E00A5E802 /* CarsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsCell.swift; sourceTree = "<group>"; };
+		AC079B5D230FD19E00A5E802 /* CarsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsCell.xib; sourceTree = "<group>"; };
+		AC0990FC2345F3BD00CB5A76 /* CarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNode.swift; sourceTree = "<group>"; };
+		AC099AB2230D1CF6009E70CA /* TileCollectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionNode.swift; sourceTree = "<group>"; };
+		AC09A04E234B37C9007A7063 /* ActivePathModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePathModel.swift; sourceTree = "<group>"; };
+		AC0B643E23100AB100E90C5F /* CarsListViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewDataModel.swift; sourceTree = "<group>"; };
+		AC124A3D23166C8D00D14C29 /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
+		AC124A40231694B400D14C29 /* TimeTableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableListView.swift; sourceTree = "<group>"; };
+		AC124A422316983200D14C29 /* TimeTableDetailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDetailListView.swift; sourceTree = "<group>"; };
+		AC124A4423169AB100D14C29 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
+		AC124A4523169AB100D14C29 /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
+		AC4202BE2313DF6C00830155 /* PathEditerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEditerModel.swift; sourceTree = "<group>"; };
+		AC4202C02313DFD100830155 /* PathDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDataModel.swift; sourceTree = "<group>"; };
+		AC4FDA1D23AC7928000D4F1E /* ViewController+CarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CarList.swift"; sourceTree = "<group>"; };
+		AC4FDA1F23AC7BF0000D4F1E /* ViewController+PathList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PathList.swift"; sourceTree = "<group>"; };
+		AC4FDA2123ACD8D1000D4F1E /* CarTrainLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTrainLabelNode.swift; sourceTree = "<group>"; };
+		AC500CC423EBD33D00A5235F /* TimeTableDatailV2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDatailV2Cell.swift; sourceTree = "<group>"; };
+		AC500CC523EBD33D00A5235F /* TimeTableDatailV2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableDatailV2Cell.xib; sourceTree = "<group>"; };
+		AC501A4F23FB968600E60DE0 /* TimeTableRoutineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableRoutineCell.swift; sourceTree = "<group>"; };
+		AC501A5023FB968600E60DE0 /* TimeTableRoutineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableRoutineCell.xib; sourceTree = "<group>"; };
+		AC50242223C463A800FDB921 /* ViewController+TrackDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TrackDisplay.swift"; sourceTree = "<group>"; };
+		AC52490D23FA881D0054F526 /* TimeTableRoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableRoutineModel.swift; sourceTree = "<group>"; };
+		AC52490F23FA9AB80054F526 /* TimeTableRoutineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableRoutineListView.swift; sourceTree = "<group>"; };
+		AC52491123FA9C840054F526 /* TimeTableRoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableRoutineViewModel.swift; sourceTree = "<group>"; };
+		AC535C6B23DFFBFA00E02270 /* ViewController+Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Routine.swift"; sourceTree = "<group>"; };
+		AC535C6D23E0515100E02270 /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
+		AC5585DA23FA3F2E00D632CF /* TimeTableDetailRoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDetailRoutsView.swift; sourceTree = "<group>"; };
+		AC5585DC23FA405600D632CF /* RoutineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDataModel.swift; sourceTree = "<group>"; };
+		AC57D1F723B07E00007AF7E5 /* StrokeLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeLabelNode.swift; sourceTree = "<group>"; };
+		AC71B34F2314E27500C64A8E /* PathListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathListView.swift; sourceTree = "<group>"; };
+		AC71B3522314EBC400C64A8E /* AleartCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AleartCenter.swift; sourceTree = "<group>"; };
+		AC71B3542314F17900C64A8E /* PathCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCell.swift; sourceTree = "<group>"; };
+		AC71B3552314F17900C64A8E /* PathCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathCell.xib; sourceTree = "<group>"; };
+		AC78E799230E499D007AD5AF /* FucntionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FucntionHelper.swift; sourceTree = "<group>"; };
+		AC78E79B230E73C3007AD5AF /* PropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewModel.swift; sourceTree = "<group>"; };
+		AC8415F623C5CF99003CDF3C /* Coordinater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinater.swift; sourceTree = "<group>"; };
+		AC98577A234F3ED5006504C6 /* CarTimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTimeTableCell.swift; sourceTree = "<group>"; };
+		AC98577B234F3ED5006504C6 /* CarTimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTimeTableCell.xib; sourceTree = "<group>"; };
+		ACA311EA230A5F79007F6109 /* RSU Railway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSU Railway.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA311ED230A5F79007F6109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACA311EF230A5F79007F6109 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		ACA311F3230A5F79007F6109 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		ACA311F5230A5F79007F6109 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACA311F7230A5F7A007F6109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACA311FA230A5F7A007F6109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACA311FC230A5F7A007F6109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA311FD230A5F7A007F6109 /* RailWay03.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RailWay03.entitlements; sourceTree = "<group>"; };
+		ACA31203230A68B3007F6109 /* TileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCell.swift; sourceTree = "<group>"; };
+		ACA31205230A7EDA007F6109 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		ACAA73FD231782610049A258 /* TimeTableDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDetailCell.swift; sourceTree = "<group>"; };
+		ACAA73FE231782610049A258 /* TimeTableDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableDetailCell.xib; sourceTree = "<group>"; };
+		ACAA7401231794650049A258 /* TimeTableDetailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDetailDataModel.swift; sourceTree = "<group>"; };
+		ACAA740323179AE00049A258 /* TimeTableDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDataModel.swift; sourceTree = "<group>"; };
+		ACAA74052317B1100049A258 /* TimeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewModel.swift; sourceTree = "<group>"; };
+		BB2BFEA6AFC10A667748D230 /* Pods-RailWay03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailWay03.debug.xcconfig"; path = "Target Support Files/Pods-RailWay03/Pods-RailWay03.debug.xcconfig"; sourceTree = "<group>"; };
+		C10A416D24A09F19008C51BB /* RealmDataRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataRecordModel.swift; sourceTree = "<group>"; };
+		C13261142484BC2E005515B0 /* ViewController+Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Server.swift"; sourceTree = "<group>"; };
+		C132611C24850D89005515B0 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		C132611E24850E24005515B0 /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
+		C132612024852E97005515B0 /* PreferenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceVC.swift; sourceTree = "<group>"; };
+		C150CD4624430A1400CB2177 /* ScheduleDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailModel.swift; sourceTree = "<group>"; };
+		C150CD482443120600CB2177 /* CarScheduleDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarScheduleDetailModel.swift; sourceTree = "<group>"; };
+		C1594EDE2615880F00E5C9E0 /* Usermanual_TH.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Usermanual_TH.pdf; sourceTree = "<group>"; };
+		C15D22AC24CECA8D000CA8FD /* defaultMap.rmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaultMap.rmap; sourceTree = "<group>"; };
+		C16BB3FD261FF62000402B44 /* CarsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsController.swift; sourceTree = "<group>"; };
+		C1774B712466B6090085A159 /* ViewController+CarControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CarControll.swift"; sourceTree = "<group>"; };
+		C18AD6D1257E0E7F00A2A921 /* CarControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarControllerCell.swift; sourceTree = "<group>"; };
+		C18AD6D2257E0E7F00A2A921 /* CarControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarControllerCell.xib; sourceTree = "<group>"; };
+		C1D7628C2477D68900BCCFFD /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		C1F4A7CF2456EDE0008F0CAB /* StationScheduleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleDataModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACA311E7230A5F79007F6109 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A9CB0287D6E7D5D1EA15DF /* Pods_RailWay03.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		525FCB31F6DA067D0F575C6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB2BFEA6AFC10A667748D230 /* Pods-RailWay03.debug.xcconfig */,
+				66E578E49CEB9F026929E739 /* Pods-RailWay03.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC06C1D9230BA9C7006B32E4 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC06C1D7230BA9C1006B32E4 /* TouchEventModel.swift */,
+				AC079B5A230FD11000A5E802 /* CarDataModel.swift */,
+				03BF4F29231062840027F921 /* SaveMapDataModel.swift */,
+				03BF4F2B231063060027F921 /* TileCellDataModel.swift */,
+				AC4202C02313DFD100830155 /* PathDataModel.swift */,
+				ACAA7401231794650049A258 /* TimeTableDetailDataModel.swift */,
+				ACAA740323179AE00049A258 /* TimeTableDataModel.swift */,
+				AC5585DC23FA405600D632CF /* RoutineDataModel.swift */,
+				AC52490D23FA881D0054F526 /* TimeTableRoutineModel.swift */,
+				C150CD4624430A1400CB2177 /* ScheduleDetailModel.swift */,
+				C150CD482443120600CB2177 /* CarScheduleDetailModel.swift */,
+				C1F4A7CF2456EDE0008F0CAB /* StationScheduleDataModel.swift */,
+				C10A416D24A09F19008C51BB /* RealmDataRecordModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		AC06C288230C069B006B32E4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AC06C289230C0CA3006B32E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C18AD6CD257E0BD700A2A921 /* CarsController */,
+				C132611B24850D48005515B0 /* Perferences */,
+				ACA311F5230A5F79007F6109 /* ViewController.swift */,
+				AC4FDA1D23AC7928000D4F1E /* ViewController+CarList.swift */,
+				AC4FDA1F23AC7BF0000D4F1E /* ViewController+PathList.swift */,
+				AC50242223C463A800FDB921 /* ViewController+TrackDisplay.swift */,
+				AC535C6B23DFFBFA00E02270 /* ViewController+Routine.swift */,
+				C1774B712466B6090085A159 /* ViewController+CarControll.swift */,
+				C13261142484BC2E005515B0 /* ViewController+Server.swift */,
+				AC98577E234F3EEF006504C6 /* CarTimeTable */,
+				AC06C28A230C0CB1006B32E4 /* GameController */,
+				AC079B59230FCFC300A5E802 /* CarsListView */,
+				AC71B3512314E28200C64A8E /* PathListView */,
+				AC124A3F23166C9200D14C29 /* TimeTable */,
+				AC535C6F23E0515600E02270 /* RoutineView */,
+				AC8415F823C5CFA5003CDF3C /* Coordinater */,
+				C132611A2484FBFE005515B0 /* HostSetting */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC06C28A230C0CB1006B32E4 /* GameController */ = {
+			isa = PBXGroup;
+			children = (
+				ACA311EF230A5F79007F6109 /* GameScene.sks */,
+				ACA311F3230A5F79007F6109 /* GameScene.swift */,
+				AC06C28B230C0CD8006B32E4 /* GameView.swift */,
+				AC099AB2230D1CF6009E70CA /* TileCollectionNode.swift */,
+			);
+			path = GameController;
+			sourceTree = "<group>";
+		};
+		AC079B59230FCFC300A5E802 /* CarsListView */ = {
+			isa = PBXGroup;
+			children = (
+				AC079B57230FCFB000A5E802 /* CarsListView.swift */,
+				AC079B5C230FD19E00A5E802 /* CarsCell.swift */,
+				AC079B5D230FD19E00A5E802 /* CarsCell.xib */,
+			);
+			path = CarsListView;
+			sourceTree = "<group>";
+		};
+		AC124A3F23166C9200D14C29 /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				AC124A3D23166C8D00D14C29 /* TimeTableView.swift */,
+				AC52490F23FA9AB80054F526 /* TimeTableRoutineListView.swift */,
+				AC5585DA23FA3F2E00D632CF /* TimeTableDetailRoutsView.swift */,
+				ACAA73FD231782610049A258 /* TimeTableDetailCell.swift */,
+				ACAA73FE231782610049A258 /* TimeTableDetailCell.xib */,
+				AC501A4F23FB968600E60DE0 /* TimeTableRoutineCell.swift */,
+				AC501A5023FB968600E60DE0 /* TimeTableRoutineCell.xib */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
+		AC535C6F23E0515600E02270 /* RoutineView */ = {
+			isa = PBXGroup;
+			children = (
+				AC535C6D23E0515100E02270 /* RoutineView.swift */,
+				AC124A40231694B400D14C29 /* TimeTableListView.swift */,
+				AC124A422316983200D14C29 /* TimeTableDetailListView.swift */,
+				AC500CC423EBD33D00A5235F /* TimeTableDatailV2Cell.swift */,
+				AC500CC523EBD33D00A5235F /* TimeTableDatailV2Cell.xib */,
+				AC124A4423169AB100D14C29 /* TimeTableCell.swift */,
+				AC124A4523169AB100D14C29 /* TimeTableCell.xib */,
+			);
+			path = RoutineView;
+			sourceTree = "<group>";
+		};
+		AC71B3512314E28200C64A8E /* PathListView */ = {
+			isa = PBXGroup;
+			children = (
+				AC71B34F2314E27500C64A8E /* PathListView.swift */,
+				AC71B3542314F17900C64A8E /* PathCell.swift */,
+				AC71B3552314F17900C64A8E /* PathCell.xib */,
+			);
+			path = PathListView;
+			sourceTree = "<group>";
+		};
+		AC8415F823C5CFA5003CDF3C /* Coordinater */ = {
+			isa = PBXGroup;
+			children = (
+				AC8415F623C5CF99003CDF3C /* Coordinater.swift */,
+			);
+			path = Coordinater;
+			sourceTree = "<group>";
+		};
+		AC98577E234F3EEF006504C6 /* CarTimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				AC98577A234F3ED5006504C6 /* CarTimeTableCell.swift */,
+				AC98577B234F3ED5006504C6 /* CarTimeTableCell.xib */,
+			);
+			path = CarTimeTable;
+			sourceTree = "<group>";
+		};
+		ACA311E1230A5F79007F6109 = {
+			isa = PBXGroup;
+			children = (
+				AC0698592318DA360085E4B2 /* Podfile */,
+				ACA311EC230A5F79007F6109 /* RailWay03 */,
+				ACA311EB230A5F79007F6109 /* Products */,
+				525FCB31F6DA067D0F575C6A /* Pods */,
+				ADDEE324EC3167A425E55F9B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ACA311EB230A5F79007F6109 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACA311EA230A5F79007F6109 /* RSU Railway.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACA311EC230A5F79007F6109 /* RailWay03 */ = {
+			isa = PBXGroup;
+			children = (
+				C176740925FCAC15002752A7 /* Help */,
+				C15D22AB24CECA8D000CA8FD /* MapData */,
+				AC06C288230C069B006B32E4 /* Source */,
+				ACA311ED230A5F79007F6109 /* AppDelegate.swift */,
+				AC06C1D5230BA250006B32E4 /* ShareData.swift */,
+				AC78E799230E499D007AD5AF /* FucntionHelper.swift */,
+				AC06985B2318DC5D0085E4B2 /* Service.swift */,
+				C1D7628C2477D68900BCCFFD /* DatabaseService.swift */,
+				AC71B3522314EBC400C64A8E /* AleartCenter.swift */,
+				AC57D1F723B07E00007AF7E5 /* StrokeLabelNode.swift */,
+				AC06C1D9230BA9C7006B32E4 /* DataModel */,
+				ACA31207230A7EE3007F6109 /* ViewModel */,
+				AC06C289230C0CA3006B32E4 /* Controller */,
+				ACA311F7230A5F7A007F6109 /* Assets.xcassets */,
+				ACA311F9230A5F7A007F6109 /* Main.storyboard */,
+				ACA311FC230A5F7A007F6109 /* Info.plist */,
+				ACA311FD230A5F7A007F6109 /* RailWay03.entitlements */,
+			);
+			path = RailWay03;
+			sourceTree = "<group>";
+		};
+		ACA31207230A7EE3007F6109 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACA31203230A68B3007F6109 /* TileCell.swift */,
+				AC0990FC2345F3BD00CB5A76 /* CarNode.swift */,
+				AC4FDA2123ACD8D1000D4F1E /* CarTrainLabelNode.swift */,
+				ACA31205230A7EDA007F6109 /* GameModel.swift */,
+				AC06C286230BF50A006B32E4 /* ViewControllerModel.swift */,
+				AC78E79B230E73C3007AD5AF /* PropertyViewModel.swift */,
+				AC0B643E23100AB100E90C5F /* CarsListViewDataModel.swift */,
+				AC4202BE2313DF6C00830155 /* PathEditerModel.swift */,
+				ACAA74052317B1100049A258 /* TimeTableViewModel.swift */,
+				AC52491123FA9C840054F526 /* TimeTableRoutineViewModel.swift */,
+				AC09A04E234B37C9007A7063 /* ActivePathModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADDEE324EC3167A425E55F9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F1B8487C0818E1902903F20 /* Pods_RailWay03.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C132611A2484FBFE005515B0 /* HostSetting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HostSetting;
+			sourceTree = "<group>";
+		};
+		C132611B24850D48005515B0 /* Perferences */ = {
+			isa = PBXGroup;
+			children = (
+				C132611C24850D89005515B0 /* Preferences.storyboard */,
+				C132611E24850E24005515B0 /* PreferenceWindowController.swift */,
+				C132612024852E97005515B0 /* PreferenceVC.swift */,
+			);
+			path = Perferences;
+			sourceTree = "<group>";
+		};
+		C15D22AB24CECA8D000CA8FD /* MapData */ = {
+			isa = PBXGroup;
+			children = (
+				C15D22AC24CECA8D000CA8FD /* defaultMap.rmap */,
+			);
+			name = MapData;
+			path = Source/MapData;
+			sourceTree = "<group>";
+		};
+		C176740925FCAC15002752A7 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				C1594EDE2615880F00E5C9E0 /* Usermanual_TH.pdf */,
+			);
+			name = Help;
+			path = Source/Help;
+			sourceTree = "<group>";
+		};
+		C18AD6CD257E0BD700A2A921 /* CarsController */ = {
+			isa = PBXGroup;
+			children = (
+				C16BB3FD261FF62000402B44 /* CarsController.swift */,
+				C18AD6D1257E0E7F00A2A921 /* CarControllerCell.swift */,
+				C18AD6D2257E0E7F00A2A921 /* CarControllerCell.xib */,
+			);
+			path = CarsController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACA311E9230A5F79007F6109 /* RailWay03 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACA31200230A5F7A007F6109 /* Build configuration list for PBXNativeTarget "RailWay03" */;
+			buildPhases = (
+				3D59C55A684B7F0F4B644ABB /* [CP] Check Pods Manifest.lock */,
+				ACA311E6230A5F79007F6109 /* Sources */,
+				ACA311E7230A5F79007F6109 /* Frameworks */,
+				ACA311E8230A5F79007F6109 /* Resources */,
+				8B2FEAF716621B387E827FC9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RailWay03;
+			productName = RailWay03;
+			productReference = ACA311EA230A5F79007F6109 /* RSU Railway.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACA311E2230A5F79007F6109 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = T2P;
+				TargetAttributes = {
+					ACA311E9230A5F79007F6109 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = ACA311E5230A5F79007F6109 /* Build configuration list for PBXProject "RailWay03" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACA311E1230A5F79007F6109;
+			productRefGroup = ACA311EB230A5F79007F6109 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACA311E9230A5F79007F6109 /* RailWay03 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACA311E8230A5F79007F6109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC71B3572314F17900C64A8E /* PathCell.xib in Resources */,
+				C1594EDF2615880F00E5C9E0 /* Usermanual_TH.pdf in Resources */,
+				AC98577D234F3ED5006504C6 /* CarTimeTableCell.xib in Resources */,
+				C18AD6D4257E0E7F00A2A921 /* CarControllerCell.xib in Resources */,
+				ACAA7400231782610049A258 /* TimeTableDetailCell.xib in Resources */,
+				AC06985A2318DA360085E4B2 /* Podfile in Resources */,
+				AC500CC723EBD33D00A5235F /* TimeTableDatailV2Cell.xib in Resources */,
+				AC124A4723169AB100D14C29 /* TimeTableCell.xib in Resources */,
+				C15D22AD24CECA8D000CA8FD /* defaultMap.rmap in Resources */,
+				ACA311F0230A5F79007F6109 /* GameScene.sks in Resources */,
+				C132611D24850D89005515B0 /* Preferences.storyboard in Resources */,
+				AC079B5F230FD19E00A5E802 /* CarsCell.xib in Resources */,
+				ACA311F8230A5F7A007F6109 /* Assets.xcassets in Resources */,
+				ACA311FB230A5F7A007F6109 /* Main.storyboard in Resources */,
+				AC501A5223FB968600E60DE0 /* TimeTableRoutineCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D59C55A684B7F0F4B644ABB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RailWay03-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B2FEAF716621B387E827FC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RailWay03/Pods-RailWay03-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RailWay03/Pods-RailWay03-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RailWay03/Pods-RailWay03-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACA311E6230A5F79007F6109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC079B58230FCFB000A5E802 /* CarsListView.swift in Sources */,
+				AC124A432316983200D14C29 /* TimeTableDetailListView.swift in Sources */,
+				C132611F24850E24005515B0 /* PreferenceWindowController.swift in Sources */,
+				AC0B643F23100AB100E90C5F /* CarsListViewDataModel.swift in Sources */,
+				AC52491223FA9C840054F526 /* TimeTableRoutineViewModel.swift in Sources */,
+				AC501A5123FB968600E60DE0 /* TimeTableRoutineCell.swift in Sources */,
+				AC50242323C463A800FDB921 /* ViewController+TrackDisplay.swift in Sources */,
+				AC124A41231694B400D14C29 /* TimeTableListView.swift in Sources */,
+				C1F4A7D02456EDE0008F0CAB /* StationScheduleDataModel.swift in Sources */,
+				AC4202BF2313DF6C00830155 /* PathEditerModel.swift in Sources */,
+				AC124A4623169AB100D14C29 /* TimeTableCell.swift in Sources */,
+				AC535C6C23DFFBFA00E02270 /* ViewController+Routine.swift in Sources */,
+				ACAA73FF231782610049A258 /* TimeTableDetailCell.swift in Sources */,
+				ACA31206230A7EDA007F6109 /* GameModel.swift in Sources */,
+				AC78E79A230E499D007AD5AF /* FucntionHelper.swift in Sources */,
+				AC535C6E23E0515100E02270 /* RoutineView.swift in Sources */,
+				AC500CC623EBD33D00A5235F /* TimeTableDatailV2Cell.swift in Sources */,
+				AC0990FD2345F3BD00CB5A76 /* CarNode.swift in Sources */,
+				C13261152484BC2E005515B0 /* ViewController+Server.swift in Sources */,
+				ACA311F6230A5F79007F6109 /* ViewController.swift in Sources */,
+				ACAA74062317B1100049A258 /* TimeTableViewModel.swift in Sources */,
+				AC4202C12313DFD100830155 /* PathDataModel.swift in Sources */,
+				C1774B722466B6090085A159 /* ViewController+CarControll.swift in Sources */,
+				C1D7628D2477D68900BCCFFD /* DatabaseService.swift in Sources */,
+				ACAA740423179AE00049A258 /* TimeTableDataModel.swift in Sources */,
+				C150CD4724430A1400CB2177 /* ScheduleDetailModel.swift in Sources */,
+				ACA311F4230A5F79007F6109 /* GameScene.swift in Sources */,
+				AC5585DD23FA405600D632CF /* RoutineDataModel.swift in Sources */,
+				AC4FDA1E23AC7928000D4F1E /* ViewController+CarList.swift in Sources */,
+				AC124A3E23166C8D00D14C29 /* TimeTableView.swift in Sources */,
+				AC4FDA2023AC7BF0000D4F1E /* ViewController+PathList.swift in Sources */,
+				ACA311EE230A5F79007F6109 /* AppDelegate.swift in Sources */,
+				AC06C28C230C0CD8006B32E4 /* GameView.swift in Sources */,
+				AC099AB3230D1CF6009E70CA /* TileCollectionNode.swift in Sources */,
+				AC079B5B230FD11000A5E802 /* CarDataModel.swift in Sources */,
+				C150CD492443120600CB2177 /* CarScheduleDetailModel.swift in Sources */,
+				ACAA7402231794650049A258 /* TimeTableDetailDataModel.swift in Sources */,
+				AC78E79C230E73C3007AD5AF /* PropertyViewModel.swift in Sources */,
+				AC52491023FA9AB80054F526 /* TimeTableRoutineListView.swift in Sources */,
+				AC71B3532314EBC400C64A8E /* AleartCenter.swift in Sources */,
+				C132612124852E97005515B0 /* PreferenceVC.swift in Sources */,
+				AC52490E23FA881D0054F526 /* TimeTableRoutineModel.swift in Sources */,
+				AC06C287230BF50A006B32E4 /* ViewControllerModel.swift in Sources */,
+				C10A416E24A09F19008C51BB /* RealmDataRecordModel.swift in Sources */,
+				AC4FDA2223ACD8D1000D4F1E /* CarTrainLabelNode.swift in Sources */,
+				AC98577C234F3ED5006504C6 /* CarTimeTableCell.swift in Sources */,
+				AC079B5E230FD19E00A5E802 /* CarsCell.swift in Sources */,
+				AC71B3562314F17900C64A8E /* PathCell.swift in Sources */,
+				AC06985C2318DC5D0085E4B2 /* Service.swift in Sources */,
+				C16BB3FE261FF62000402B44 /* CarsController.swift in Sources */,
+				ACA31204230A68B3007F6109 /* TileCell.swift in Sources */,
+				03BF4F2A231062840027F921 /* SaveMapDataModel.swift in Sources */,
+				AC8415F723C5CF99003CDF3C /* Coordinater.swift in Sources */,
+				C18AD6D3257E0E7F00A2A921 /* CarControllerCell.swift in Sources */,
+				03BF4F2C231063060027F921 /* TileCellDataModel.swift in Sources */,
+				AC71B3502314E27500C64A8E /* PathListView.swift in Sources */,
+				AC06C1D8230BA9C1006B32E4 /* TouchEventModel.swift in Sources */,
+				AC09A04F234B37C9007A7063 /* ActivePathModel.swift in Sources */,
+				AC57D1F823B07E00007AF7E5 /* StrokeLabelNode.swift in Sources */,
+				AC5585DB23FA3F2E00D632CF /* TimeTableDetailRoutsView.swift in Sources */,
+				AC06C1D6230BA250006B32E4 /* ShareData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ACA311F9230A5F7A007F6109 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACA311FA230A5F7A007F6109 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACA311FE230A5F7A007F6109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ACA311FF230A5F7A007F6109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		ACA31201230A5F7A007F6109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2BFEA6AFC10A667748D230 /* Pods-RailWay03.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RailWay03/RailWay03.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 4836KR52L9;
+				INFOPLIST_FILE = RailWay03/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pucknavin.railway;
+				PRODUCT_NAME = "RSU Railway";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ACA31202230A5F7A007F6109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66E578E49CEB9F026929E739 /* Pods-RailWay03.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RailWay03/RailWay03.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 4836KR52L9;
+				INFOPLIST_FILE = RailWay03/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pucknavin.railway;
+				PRODUCT_NAME = "RSU Railway";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACA311E5230A5F79007F6109 /* Build configuration list for PBXProject "RailWay03" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACA311FE230A5F7A007F6109 /* Debug */,
+				ACA311FF230A5F7A007F6109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACA31200230A5F7A007F6109 /* Build configuration list for PBXNativeTarget "RailWay03" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACA31201230A5F7A007F6109 /* Debug */,
+				ACA31202230A5F7A007F6109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACA311E2230A5F79007F6109 /* Project object */;
+}

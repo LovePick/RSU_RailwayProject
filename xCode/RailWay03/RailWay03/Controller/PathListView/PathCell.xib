@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PathCell" customModule="RailWay03" customModuleProvider="target">
+            <connections>
+                <outlet property="from" destination="Ltg-uW-fh5" id="tDl-Oh-8PE"/>
+                <outlet property="lbTo" destination="EXy-NE-O3f" id="8NP-09-6fY"/>
+                <outlet property="to" destination="lqk-5o-MI0" id="ude-RX-HEs"/>
+                <outlet property="viContentBG" destination="4uv-TZ-qwy" id="zFy-4s-yvz"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="212" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="4uv-TZ-qwy">
+                    <rect key="frame" x="4" y="4" width="204" height="72"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ltg-uW-fh5">
+                            <rect key="frame" x="8" y="46" width="188" height="18"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="NKZ-Lg-2bp">
+                                <font key="font" metaFont="system" size="14"/>
+                                <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lqk-5o-MI0">
+                            <rect key="frame" x="8" y="8" width="188" height="18"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="YyS-Rr-PIT">
+                                <font key="font" metaFont="system" size="14"/>
+                                <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EXy-NE-O3f">
+                            <rect key="frame" x="8" y="28" width="188" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="to" id="y3q-hA-QO0">
+                                <font key="font" usesAppearanceFont="YES"/>
+                                <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="lqk-5o-MI0" secondAttribute="bottom" constant="8" id="0kG-m7-iXt"/>
+                        <constraint firstItem="EXy-NE-O3f" firstAttribute="leading" secondItem="4uv-TZ-qwy" secondAttribute="leading" constant="10" id="BMt-cn-fR8"/>
+                        <constraint firstAttribute="trailing" secondItem="Ltg-uW-fh5" secondAttribute="trailing" constant="10" id="CUW-Hm-GKb"/>
+                        <constraint firstAttribute="trailing" secondItem="lqk-5o-MI0" secondAttribute="trailing" constant="10" id="Nc0-fE-mns"/>
+                        <constraint firstItem="Ltg-uW-fh5" firstAttribute="leading" secondItem="4uv-TZ-qwy" secondAttribute="leading" constant="10" id="TOz-ci-Fte"/>
+                        <constraint firstItem="EXy-NE-O3f" firstAttribute="centerY" secondItem="4uv-TZ-qwy" secondAttribute="centerY" id="gps-Vg-iCp"/>
+                        <constraint firstItem="Ltg-uW-fh5" firstAttribute="top" secondItem="4uv-TZ-qwy" secondAttribute="top" constant="8" id="grz-yV-dNU"/>
+                        <constraint firstItem="lqk-5o-MI0" firstAttribute="leading" secondItem="4uv-TZ-qwy" secondAttribute="leading" constant="10" id="iPO-45-nnP"/>
+                        <constraint firstAttribute="trailing" secondItem="EXy-NE-O3f" secondAttribute="trailing" constant="10" id="sdM-fJ-9My"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4uv-TZ-qwy" secondAttribute="bottom" constant="4" id="Hme-G5-Brd"/>
+                <constraint firstAttribute="trailing" secondItem="4uv-TZ-qwy" secondAttribute="trailing" constant="4" id="NsH-mh-1Tc"/>
+                <constraint firstItem="4uv-TZ-qwy" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="hmK-ko-esN"/>
+                <constraint firstItem="4uv-TZ-qwy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="lnW-Zp-p9J"/>
+            </constraints>
+            <point key="canvasLocation" x="7" y="61.5"/>
+        </customView>
+        <customObject id="WiF-Ew-FCA" customClass="PathCell" customModule="RailWay03" customModuleProvider="target"/>
+    </objects>
+</document>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CarsCell" customModule="RSU_Railway" customModuleProvider="target">
+            <connections>
+                <outlet property="btTimeTable" destination="hxg-a9-xc7" id="1Zy-4f-RUF"/>
+                <outlet property="lbOnlineMark" destination="qFW-Vb-NDb" id="y52-Cu-tXj"/>
+                <outlet property="lbTitle" destination="5yB-lO-ob6" id="Pol-CX-G66"/>
+                <outlet property="viContentBG" destination="CuG-xz-59O" id="cYa-jH-9wS"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="138" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="CuG-xz-59O">
+                    <rect key="frame" x="4" y="4" width="130" height="70"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-lO-ob6">
+                            <rect key="frame" x="18" y="44" width="94" height="16"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" drawsBackground="YES" id="AjH-if-va8">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textFieldCell>
+                        </textField>
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hxg-a9-xc7">
+                            <rect key="frame" x="15" y="6" width="101" height="25"/>
+                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Wzl-Xd-W9z" id="xyy-h1-LND">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="6Ks-1t-uz1">
+                                    <items>
+                                        <menuItem title="Item 1" state="on" id="Wzl-Xd-W9z"/>
+                                        <menuItem title="Item 2" id="G6Q-bl-zYu"/>
+                                        <menuItem title="Item 3" id="FwC-hJ-rd6"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                            <connections>
+                                <action selector="selectTimeTable:" target="-2" id="4s8-Uz-q6t"/>
+                            </connections>
+                        </popUpButton>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qFW-Vb-NDb">
+                            <rect key="frame" x="2" y="44" width="17" height="16"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="◉" id="apQ-Bf-suz">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="hxg-a9-xc7" secondAttribute="trailing" constant="18" id="8z5-lC-aQu"/>
+                        <constraint firstItem="qFW-Vb-NDb" firstAttribute="leading" secondItem="CuG-xz-59O" secondAttribute="leading" constant="4" id="OjM-kZ-Wjr"/>
+                        <constraint firstItem="hxg-a9-xc7" firstAttribute="leading" secondItem="CuG-xz-59O" secondAttribute="leading" constant="18" id="cpN-Qc-fGl"/>
+                        <constraint firstItem="qFW-Vb-NDb" firstAttribute="centerY" secondItem="5yB-lO-ob6" secondAttribute="centerY" id="dBL-T6-jQs"/>
+                        <constraint firstAttribute="bottom" secondItem="hxg-a9-xc7" secondAttribute="bottom" constant="10" id="m7d-OG-4f7"/>
+                        <constraint firstAttribute="trailing" secondItem="5yB-lO-ob6" secondAttribute="trailing" constant="18" id="mYH-cU-q6Z"/>
+                        <constraint firstItem="5yB-lO-ob6" firstAttribute="leading" secondItem="CuG-xz-59O" secondAttribute="leading" constant="18" id="uU9-P3-vg7"/>
+                        <constraint firstItem="5yB-lO-ob6" firstAttribute="top" secondItem="CuG-xz-59O" secondAttribute="top" constant="10" id="v47-iA-htc"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="CuG-xz-59O" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="BMP-e4-JUD"/>
+                <constraint firstAttribute="trailing" secondItem="CuG-xz-59O" secondAttribute="trailing" constant="4" id="Qav-qg-hpC"/>
+                <constraint firstItem="CuG-xz-59O" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="qYm-Wo-iQI"/>
+                <constraint firstAttribute="bottom" secondItem="CuG-xz-59O" secondAttribute="bottom" constant="4" id="vtd-N9-61e"/>
+            </constraints>
+            <point key="canvasLocation" x="-30" y="57"/>
+        </customView>
+        <customObject id="jwD-uP-dfk" customClass="CarsCell" customModule="RSU_Railway" customModuleProvider="target"/>
+    </objects>
+</document>

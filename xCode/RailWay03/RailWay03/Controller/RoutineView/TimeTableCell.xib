@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TimeTableCell" customModule="RailWay03" customModuleProvider="target">
+            <connections>
+                <outlet property="tfTitle" destination="5Q1-H1-Z4y" id="ITw-4i-qBk"/>
+                <outlet property="viContentBG" destination="NWe-0Y-eoV" id="2Ua-cx-UmG"/>
+                <outlet property="viLine" destination="aWK-7V-yOq" id="cLL-BQ-z4b"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="9Sm-bi-Uuc" customClass="TimeTableCell" customModule="RailWay03" customModuleProvider="target"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="241" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="NWe-0Y-eoV">
+                    <rect key="frame" x="0.0" y="0.0" width="241" height="64"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="aWK-7V-yOq">
+                            <rect key="frame" x="0.0" y="0.0" width="241" height="1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="BkR-LH-gr7"/>
+                            </constraints>
+                        </customView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Q1-H1-Z4y">
+                            <rect key="frame" x="6" y="24" width="37" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="tDL-KA-cX7">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="aWK-7V-yOq" firstAttribute="leading" secondItem="NWe-0Y-eoV" secondAttribute="leading" id="3LQ-ET-uBP"/>
+                        <constraint firstItem="5Q1-H1-Z4y" firstAttribute="leading" secondItem="NWe-0Y-eoV" secondAttribute="leading" constant="8" id="Z4b-3q-KOY"/>
+                        <constraint firstItem="5Q1-H1-Z4y" firstAttribute="centerY" secondItem="NWe-0Y-eoV" secondAttribute="centerY" id="hRN-MX-oMF"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Q1-H1-Z4y" secondAttribute="trailing" constant="8" id="lxq-gq-snd"/>
+                        <constraint firstAttribute="trailing" secondItem="aWK-7V-yOq" secondAttribute="trailing" id="r7R-QK-71n"/>
+                        <constraint firstAttribute="bottom" secondItem="aWK-7V-yOq" secondAttribute="bottom" id="vIC-GU-F8g"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NWe-0Y-eoV" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="8c2-C5-scB"/>
+                <constraint firstAttribute="trailing" secondItem="NWe-0Y-eoV" secondAttribute="trailing" id="JYx-GO-y4d"/>
+                <constraint firstItem="NWe-0Y-eoV" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="OJW-hE-sEI"/>
+                <constraint firstAttribute="bottom" secondItem="NWe-0Y-eoV" secondAttribute="bottom" id="Ojp-O7-Os6"/>
+            </constraints>
+            <point key="canvasLocation" x="-161.5" y="-47"/>
+        </customView>
+    </objects>
+</document>

@@ -1,0 +1,24 @@
+{
+  "name": "rsu-railway",
+  "version": "1.0.0",
+  "description": "learn to code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "supapon",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0",
+    "url-search-params-polyfill": "^8.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/rsu-railway.git"
+  },
+  "keywords": [
+    "rsu"
+  ]
+}

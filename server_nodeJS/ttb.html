@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>time table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 13px Helvetica, Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+
+        var sID = getUrlVars()["id"];
+        var roomName = "timetable" + sID;
+
+
+        /*
+        $(function () {
+
+            var socket = io();
+            socket.on(roomName, function (msg) {
+
+                var jsonStr = JSON.stringify(msg);
+                document.body.innerHTML = jsonStr;
+
+            });
+
+            let emObject = { message: { stationID: sID } };
+            socket.emit('gettimetable', emObject);
+
+        });
+*/
+
+
+
+
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+    </script>
+</body>
+
+</html>

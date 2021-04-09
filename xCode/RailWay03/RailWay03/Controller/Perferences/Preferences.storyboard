@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Dt8-MZ-Tct">
+            <objects>
+                <windowController storyboardIdentifier="PreferenceWindowController" id="1pF-Dp-65K" customClass="PreferenceWindowController" customModule="RailWay03" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="oaN-L8-js9">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="1pF-Dp-65K" id="b3k-IF-v3f"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="7iF-hX-WQW" kind="relationship" relationship="window.shadowedContentViewController" id="Hx1-Zr-yeP"/>
+                    </connections>
+                </windowController>
+                <customObject id="6um-Ba-98s" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="-141"/>
+        </scene>
+        <!--PreferenceVC-->
+        <scene sceneID="XlF-Za-ljU">
+            <objects>
+                <viewController id="7iF-hX-WQW" customClass="PreferenceVC" customModule="RailWay03" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ss3-yg-LU9">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IpY-98-ObL">
+                                <rect key="frame" x="18" y="193" width="37" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Host:" id="BRO-dc-6bq">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vtM-iH-gRa">
+                                <rect key="frame" x="61" y="191" width="257" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="61i-bq-Fn9"/>
+                                    <constraint firstAttribute="width" constant="257" id="GyE-Tt-VpI"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Czm-Qm-0xs">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-1c-MTe">
+                                <rect key="frame" x="364" y="191" width="96" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="MoO-gM-yHG">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fha-FC-AYH">
+                                <rect key="frame" x="324" y="193" width="34" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Port:" id="oFX-8n-9Y3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q0O-By-MWZ">
+                                <rect key="frame" x="18" y="227" width="444" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1bv-uJ-0nz"/>
+                                </constraints>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="kcN-5o-2EY">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="Local Host" width="146"/>
+                                        <segment label="Internet" width="145" selected="YES" tag="1"/>
+                                        <segment label="Custom" width="145"/>
+                                    </segments>
+                                </segmentedCell>
+                            </segmentedControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vtM-iH-gRa" firstAttribute="leading" secondItem="IpY-98-ObL" secondAttribute="trailing" constant="8" id="FRP-q0-0hj"/>
+                            <constraint firstItem="q0O-By-MWZ" firstAttribute="leading" secondItem="ss3-yg-LU9" secondAttribute="leading" constant="20" id="FpD-A9-NnA"/>
+                            <constraint firstItem="IpY-98-ObL" firstAttribute="top" secondItem="q0O-By-MWZ" secondAttribute="bottom" constant="20" id="HtR-Mx-f1m"/>
+                            <constraint firstItem="vtM-iH-gRa" firstAttribute="centerY" secondItem="IpY-98-ObL" secondAttribute="centerY" id="MNq-ec-TLG"/>
+                            <constraint firstAttribute="trailing" secondItem="q0O-By-MWZ" secondAttribute="trailing" constant="20" id="MWT-pg-1uA"/>
+                            <constraint firstAttribute="trailing" secondItem="OAk-1c-MTe" secondAttribute="trailing" constant="20" id="TFV-Q0-FeN"/>
+                            <constraint firstItem="OAk-1c-MTe" firstAttribute="centerY" secondItem="Fha-FC-AYH" secondAttribute="centerY" id="Uoc-4z-nP0"/>
+                            <constraint firstItem="Fha-FC-AYH" firstAttribute="leading" secondItem="vtM-iH-gRa" secondAttribute="trailing" constant="8" id="bn8-Fb-HkB"/>
+                            <constraint firstItem="OAk-1c-MTe" firstAttribute="leading" secondItem="Fha-FC-AYH" secondAttribute="trailing" constant="8" id="hmr-7V-ROi"/>
+                            <constraint firstItem="IpY-98-ObL" firstAttribute="leading" secondItem="ss3-yg-LU9" secondAttribute="leading" constant="20" id="oGZ-rt-tFd"/>
+                            <constraint firstItem="q0O-By-MWZ" firstAttribute="top" secondItem="ss3-yg-LU9" secondAttribute="top" constant="20" id="sxC-6s-IwO"/>
+                            <constraint firstItem="Fha-FC-AYH" firstAttribute="centerY" secondItem="vtM-iH-gRa" secondAttribute="centerY" id="veR-vT-AgI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfHost" destination="vtM-iH-gRa" id="apM-V3-MTn"/>
+                        <outlet property="tfPort" destination="OAk-1c-MTe" id="hTJ-rS-ikn"/>
+                    </connections>
+                </viewController>
+                <customObject id="VCo-3D-AUD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="270"/>
+        </scene>
+    </scenes>
+</document>
