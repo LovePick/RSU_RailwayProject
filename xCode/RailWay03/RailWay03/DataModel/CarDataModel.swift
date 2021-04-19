@@ -95,7 +95,8 @@ class CarDataModel: NSObject {
     var speed:Double = 0.50
     
     
-    var maxSpeed:Double = 1.0
+    var maxSpeed:Double = 0.50
+    
     
     
     override init() {
@@ -608,12 +609,17 @@ class CarDataModel: NSObject {
                     
                     self.position = .atStation
                     self.activeStatus = .onTheWay
+                    
+                    
                 }
                 
                 
                 if(self.activeStatus == .onTheWay){
                     self.position = .onTheWay
                     
+                    if(self.speed < self.maxSpeed){
+                        self.speed += 0.05
+                    }
                     
                     if(self.inModeSimulator == true){
                         if(simulatorProgressCount >= simulatorProgressFinish){

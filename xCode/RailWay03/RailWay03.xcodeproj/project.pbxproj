@@ -79,6 +79,7 @@
 		C1594EDF2615880F00E5C9E0 /* Usermanual_TH.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C1594EDE2615880F00E5C9E0 /* Usermanual_TH.pdf */; };
 		C15D22AD24CECA8D000CA8FD /* defaultMap.rmap in Resources */ = {isa = PBXBuildFile; fileRef = C15D22AC24CECA8D000CA8FD /* defaultMap.rmap */; };
 		C16BB3FE261FF62000402B44 /* CarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BB3FD261FF62000402B44 /* CarsController.swift */; };
+		C16C2A67262D4D8600E88048 /* ShipControllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C2A66262D4D8600E88048 /* ShipControllModel.swift */; };
 		C1774B722466B6090085A159 /* ViewController+CarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1774B712466B6090085A159 /* ViewController+CarControll.swift */; };
 		C18AD6D3257E0E7F00A2A921 /* CarControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AD6D1257E0E7F00A2A921 /* CarControllerCell.swift */; };
 		C18AD6D4257E0E7F00A2A921 /* CarControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AD6D2257E0E7F00A2A921 /* CarControllerCell.xib */; };
@@ -164,6 +165,7 @@
 		C1594EDE2615880F00E5C9E0 /* Usermanual_TH.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Usermanual_TH.pdf; sourceTree = "<group>"; };
 		C15D22AC24CECA8D000CA8FD /* defaultMap.rmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaultMap.rmap; sourceTree = "<group>"; };
 		C16BB3FD261FF62000402B44 /* CarsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsController.swift; sourceTree = "<group>"; };
+		C16C2A66262D4D8600E88048 /* ShipControllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipControllModel.swift; sourceTree = "<group>"; };
 		C1774B712466B6090085A159 /* ViewController+CarControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CarControll.swift"; sourceTree = "<group>"; };
 		C18AD6D1257E0E7F00A2A921 /* CarControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarControllerCell.swift; sourceTree = "<group>"; };
 		C18AD6D2257E0E7F00A2A921 /* CarControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarControllerCell.xib; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				C150CD482443120600CB2177 /* CarScheduleDetailModel.swift */,
 				C1F4A7CF2456EDE0008F0CAB /* StationScheduleDataModel.swift */,
 				C10A416D24A09F19008C51BB /* RealmDataRecordModel.swift */,
+				C16C2A66262D4D8600E88048 /* ShipControllModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				AC535C6E23E0515100E02270 /* RoutineView.swift in Sources */,
 				AC500CC623EBD33D00A5235F /* TimeTableDatailV2Cell.swift in Sources */,
 				AC0990FD2345F3BD00CB5A76 /* CarNode.swift in Sources */,
+				C16C2A67262D4D8600E88048 /* ShipControllModel.swift in Sources */,
 				C13261152484BC2E005515B0 /* ViewController+Server.swift in Sources */,
 				ACA311F6230A5F79007F6109 /* ViewController.swift in Sources */,
 				ACAA74062317B1100049A258 /* TimeTableViewModel.swift in Sources */,

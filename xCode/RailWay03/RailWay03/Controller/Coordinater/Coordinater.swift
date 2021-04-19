@@ -63,11 +63,17 @@ class Coordinater: NSObject {
     
     var arQueue:[CarDataModel] = [CarDataModel]()
 
+    var arShipControll:[ShipControllModel] = [ShipControllModel]()
+    
+    
     private var countUpdateActiveCar:NSInteger = 0
+    
+    private var countController:NSInteger = 0
     override init() {
         super.init()
         
         myService.delegate = self
+        self.registerShipControll()
     }
     
     
@@ -107,6 +113,30 @@ class Coordinater: NSObject {
     }
     
     
+    func registerShipControll() {
+        if(arShipControll.count == 0){
+            arShipControll.append(self.createShipControll(id: "CT01_01"))
+            arShipControll.append(self.createShipControll(id: "CT01_02"))
+            arShipControll.append(self.createShipControll(id: "CT02_01"))
+            arShipControll.append(self.createShipControll(id: "CT02_02"))
+            arShipControll.append(self.createShipControll(id: "CT03_01"))
+            arShipControll.append(self.createShipControll(id: "CT03_02"))
+            arShipControll.append(self.createShipControll(id: "CT03_03"))
+            arShipControll.append(self.createShipControll(id: "CT04_01"))
+            arShipControll.append(self.createShipControll(id: "CT04_02"))
+            arShipControll.append(self.createShipControll(id: "CT05_01"))
+            arShipControll.append(self.createShipControll(id: "CT05_02"))
+            arShipControll.append(self.createShipControll(id: "CT06_01"))
+            arShipControll.append(self.createShipControll(id: "CT06_02"))
+        }
+    }
+    
+    func createShipControll(id:String) -> ShipControllModel{
+        let newitem = ShipControllModel()
+     
+        newitem.id = id
+        return newitem
+    }
     
     func startTimer(){
         self.controllStatus = .runing
@@ -695,6 +725,7 @@ extension Coordinater:ServiceDelegate{
         print(">>>>>> \(stationID) >>> to: \(to.id)")
         if(to.id == stationID){
             self.setStatusCarWith(carID: car.id, status: .arrived)
+            self.myLoop()
         }else{
 //            self.setStatusCarWith(carID: car.id, status: .error)
         }
@@ -757,6 +788,13 @@ extension Coordinater:ServiceDelegate{
             }
         }
         
+        
+        
+    }
+    
+    
+    func registerController(controllID: String) {
+        self.countController = 0
         
         
     }

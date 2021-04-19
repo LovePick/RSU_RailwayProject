@@ -18,6 +18,7 @@ import WebKit
     @objc optional func carArrive(carID:String, stationID:String)
     @objc optional func restartSimulator()
     @objc optional func registerCars(carName:String)
+    @objc optional func registerController(controllID:String)
 }
 
 class Service: NSObject {
@@ -158,10 +159,29 @@ class Service: NSObject {
                         de.registerCars?(carName: name)
                     }
                 }
-                
-                
-                
             }
+            
+            
+            socket.on("registerControll"){ data, ack in
+                guard let message = data[0] as? [String:Any] else { return }
+                print("registerCar ------")
+                print(message)
+                
+                
+                var name:String = ""
+                if let value = message["name"] as? String{
+                    name = value
+                }else if let value = message["name"] as? NSInteger{
+                    name = "\(value)"
+                }
+                
+                if( name != "" ){
+                    if let de = self.delegate{
+                        de.registerController?(controllID: name)
+                    }
+                }
+            }
+            
             
             
             socket.on("continue"){ data, ack in
