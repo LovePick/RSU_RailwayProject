@@ -126,8 +126,8 @@
             filePath = "RailWay03/Controller/Coordinater/Coordinater.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "708"
-            endingLineNumber = "708"
+            startingLineNumber = "711"
+            endingLineNumber = "711"
             landmarkName = "carArrive(carID:stationID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -260,14 +260,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "75EC165A-5818-4084-9333-700018601E79 - 8f93874f8d69dd5f"
+                  uuid = "75EC165A-5818-4084-9333-700018601E79 - 9346c10ed386bd1f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "RSU_Railway.TimeTableViewModel.readSaveJson(fields: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
                   moduleName = "RSU Railway"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/supaponpucknavin/Documents/PickProject/RSU_Railway/Railway03/RailWay03/RailWay03/ViewModel/TimeTableViewModel.swift"
+                  urlString = "file:///Users/supaponpucknavin/Documents/PickProject/GitHub/RSU_RailwayProject/xCode/RailWay03/RailWay03/ViewModel/TimeTableViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -275,14 +275,14 @@
                   offsetFromSymbolStart = "1238">
                </Location>
                <Location
-                  uuid = "75EC165A-5818-4084-9333-700018601E79 - d13328eecb3d1d15"
+                  uuid = "75EC165A-5818-4084-9333-700018601E79 - cde66eaf95d27dd5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (RSU_Railway.TimeTableDataModel, RSU_Railway.TimeTableDataModel) -&gt; Swift.Bool in RSU_Railway.TimeTableViewModel.readSaveJson(fields: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
                   moduleName = "RSU Railway"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/supaponpucknavin/Documents/PickProject/RSU_Railway/Railway03/RailWay03/RailWay03/ViewModel/TimeTableViewModel.swift"
+                  urlString = "file:///Users/supaponpucknavin/Documents/PickProject/GitHub/RSU_RailwayProject/xCode/RailWay03/RailWay03/ViewModel/TimeTableViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
@@ -654,8 +654,8 @@
             filePath = "RailWay03/Controller/Coordinater/Coordinater.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "705"
-            endingLineNumber = "705"
+            startingLineNumber = "708"
+            endingLineNumber = "708"
             landmarkName = "continueCarWith(carID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -686,8 +686,8 @@
             filePath = "RailWay03/Controller/Coordinater/Coordinater.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "702"
-            endingLineNumber = "702"
+            startingLineNumber = "705"
+            endingLineNumber = "705"
             landmarkName = "stopCarWith(carID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -702,8 +702,8 @@
             filePath = "RailWay03/Controller/Coordinater/Coordinater.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "649"
-            endingLineNumber = "649"
+            startingLineNumber = "652"
+            endingLineNumber = "652"
             landmarkName = "setStatusCarWith(carID:status:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -718,25 +718,9 @@
             filePath = "RailWay03/Controller/Coordinater/Coordinater.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "648"
-            endingLineNumber = "648"
+            startingLineNumber = "651"
+            endingLineNumber = "651"
             landmarkName = "setStatusCarWith(carID:status:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B8C54B42-A862-4FA7-9BEB-7F4A078CADD5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RailWay03/DataModel/CarDataModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "478"
-            endingLineNumber = "478"
-            landmarkName = "updateStep(time:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -750,8 +734,8 @@
             filePath = "RailWay03/Controller/Coordinater/Coordinater.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "641"
-            endingLineNumber = "641"
+            startingLineNumber = "644"
+            endingLineNumber = "644"
             landmarkName = "setStatusCarWith(carID:status:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -798,8 +782,8 @@
             filePath = "RailWay03/Controller/TimeTable/TimeTableDetailRoutsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "461"
+            endingLineNumber = "461"
             landmarkName = "updateTimeRelation(index:time:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -807,48 +791,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "69A36363-E781-467F-A81C-B20126CF3212"
+            uuid = "B52F0A47-D98A-490B-87D1-F45C7E9FA51D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RailWay03/Controller/TimeTable/TimeTableView.swift"
+            filePath = "RailWay03/Controller/Coordinater/Coordinater.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "setup()"
+            startingLineNumber = "498"
+            endingLineNumber = "498"
+            landmarkName = "adjutTimeToNow()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CBC5082E-0E39-47B5-97E5-EDE0FF35D5DD"
+            uuid = "25ADE1B1-B7F9-4F19-96A7-F328F248AA0B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RailWay03/Controller/TimeTable/TimeTableView.swift"
+            filePath = "RailWay03/DataModel/TimeTableRoutineModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "341"
-            endingLineNumber = "341"
-            landmarkName = "setup()"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "updateTimeRelation(time:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B74B9355-2E45-4D65-A53B-5EBAFA84F334"
+            uuid = "5D117B6C-CDDD-442E-A55D-0ABF23E44261"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RailWay03/Controller/TimeTable/TimeTableRoutineListView.swift"
+            filePath = "RailWay03/DataModel/TimeTableRoutineModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "setup()"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "updateTimeRelation(time:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5D351C8-BAEE-40C0-BDA9-951AED31FE7D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RailWay03/DataModel/TimeTableRoutineModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "updateTimeRelation(time:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "359D5EC5-9F05-49A1-AD6C-821AE034718B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RailWay03/ViewModel/TimeTableRoutineViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "addNewDetail()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D0011CE-2F0E-4AB1-AE7C-B38A24428558"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RailWay03/ViewModel/TimeTableRoutineViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "addNewDetail()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5996195-C6E1-4193-92A0-AE4D1797E7A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RailWay03/Controller/Coordinater/Coordinater.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "479"
+            endingLineNumber = "479"
+            landmarkName = "adjutTimeToNow()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

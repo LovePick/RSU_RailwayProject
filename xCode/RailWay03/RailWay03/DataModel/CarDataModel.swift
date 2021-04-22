@@ -610,7 +610,7 @@ class CarDataModel: NSObject {
                     self.position = .atStation
                     self.activeStatus = .onTheWay
                     
-                    
+                    self.speed = 0
                 }
                 
                 
@@ -618,8 +618,20 @@ class CarDataModel: NSObject {
                     self.position = .onTheWay
                     
                     if(self.speed < self.maxSpeed){
-                        self.speed += 0.05
+                        let pSpeed = 0.2
+                        self.speed += pSpeed
                     }
+                    
+                    if(self.speed > self.maxSpeed){
+                        self.speed = self.maxSpeed
+                    }
+                    
+                    if let nextStation = self.getNextStation(){
+                        if((nextStation.id.lowercased() == "b11-a") || (nextStation.id.lowercased() == "b11-b") || (nextStation.id.lowercased() == "b11-c") || (nextStation.id.lowercased() == "b11-d")){
+                            self.speed = 0.8
+                        }
+                    }
+                    
                     
                     if(self.inModeSimulator == true){
                         if(simulatorProgressCount >= simulatorProgressFinish){
@@ -797,7 +809,18 @@ class CarDataModel: NSObject {
     }
     
     func setMaxSpeed(speed:Double) {
-        self.maxSpeed = speed
-        self.speed = speed
+        
+        if(speed >= 0 && speed <= 1){
+            self.maxSpeed = speed
+            self.speed = speed
+            
+            if let nextStation = self.getNextStation(){
+                if((nextStation.id.lowercased() == "b11-a") || (nextStation.id.lowercased() == "b11-b") || (nextStation.id.lowercased() == "b11-c") || (nextStation.id.lowercased() == "b11-d")){
+                    self.speed = 0.8
+                }
+            }
+            
+        }
+        
     }
 }

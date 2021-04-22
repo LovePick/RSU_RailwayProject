@@ -457,12 +457,14 @@ class Coordinater: NSObject {
             for r in arR{
                 
                 if(startTime == nil){
-                    startTime = r.startTime
+//                    startTime = r.startTime
+                    startTime = r.stringTimeToDateToday(str: r.strStartTime)
                 }
                 
                 // find Start time
                 if(r.startTime.timeIntervalSince1970 < startTime.timeIntervalSince1970){
-                    startTime = r.startTime
+//                    startTime = r.startTime
+                    startTime = r.stringTimeToDateToday(str: r.strStartTime)
                 }
             }
         }
@@ -480,10 +482,11 @@ class Coordinater: NSObject {
             let arR = ttbr.arRoutine
             for r in arR{
                 
-                let oldTime = r.startTime
-                
+//                let oldTime = r.startTime
+                let oldTime = r.stringTimeToDateToday(str: r.strStartTime)
                 if(r.buffStartTime == nil){
-                    r.buffStartTime = r.startTime
+//                    r.buffStartTime = r.startTime
+                    r.buffStartTime = r.stringTimeToDateToday(str: r.strStartTime)
                 }
                  
                 

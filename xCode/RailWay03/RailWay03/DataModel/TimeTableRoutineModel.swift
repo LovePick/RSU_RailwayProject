@@ -96,9 +96,17 @@ class TimeTableRoutineModel: NSObject {
     }
     
     
-    func updateTimeRelation(startTime:Date){
+    func updateTimeRelation(time:Date){
         
         let index:NSInteger = 0
+        
+        
+        let strTime = self.arRoutine[index].dateToStringTime(date: time)
+        self.arRoutine[index].strStartTime = strTime
+        let startTime = self.arRoutine[index].stringTimeToDateToday(str: strTime)
+        
+        
+        
 
         self.arRoutine[index].startTime = startTime
 
@@ -122,6 +130,7 @@ class TimeTableRoutineModel: NSObject {
                     let newStartTime = calendar.date(byAdding: .second, value: Int(duration), to: startTime) ?? lastStart
 
                     self.arRoutine[i].startTime = newStartTime
+                    self.arRoutine[i].strStartTime = self.arRoutine[i].dateToStringTime(date: newStartTime)
                    
                     let newIndex:IndexPath = IndexPath(item: i, section: 0)
                     arCollectionIndex.append(newIndex)

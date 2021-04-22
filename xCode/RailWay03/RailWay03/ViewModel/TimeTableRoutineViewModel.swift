@@ -79,7 +79,7 @@ class TimeTableRoutineViewModel: NSObject {
                     newItem.arRoutine[i].startTime = et.startTime
                     newItem.arRoutine[i].endTime = et.endTime
                     newItem.arRoutine[i].buffStartTime = et.buffStartTime
-                    
+                    newItem.arRoutine[i].strStartTime = et.strStartTime
                 }
             }
             
@@ -164,6 +164,8 @@ class TimeTableRoutineViewModel: NSObject {
                     let lastItem = self.arRoutine[self.selectAtIndex].arRoutine[count - 1]
                     newDetail.startTime = lastItem.endTime ?? lastItem.startTime
                     newDetail.buffStartTime = newDetail.startTime
+                    newDetail.strStartTime = newDetail.dateToStringTime(date:newDetail.startTime)
+                    
                 }
                 
                 

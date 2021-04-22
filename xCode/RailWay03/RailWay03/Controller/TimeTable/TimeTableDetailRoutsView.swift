@@ -447,8 +447,12 @@ extension TimeTableDetailRoutsView:TimeTableRoutineCellDelegate{
             return
         }
 
-        self.arRoutine[index].startTime = time
-        self.arRoutine[index].buffStartTime = time
+        let strTime = self.arRoutine[index].dateToStringTime(date: time)
+        self.arRoutine[index].strStartTime = strTime
+        let ajTime = self.arRoutine[index].stringTimeToDateToday(str: strTime)
+        
+        self.arRoutine[index].startTime = ajTime
+        self.arRoutine[index].buffStartTime = ajTime
 
         guard let ms = self.shareData.masterVC else {
             return
@@ -459,15 +463,16 @@ extension TimeTableDetailRoutsView:TimeTableRoutineCellDelegate{
         
         var duration:NSInteger = 0
         
-        var lastStart:Date = time
+        var lastStart:Date = ajTime
         
         var arCollectionIndex:[IndexPath] = [IndexPath]()
         for i in index..<self.arRoutine.count{
             let rout = self.arRoutine[i]
             if let ttb = ms.getTimeTableWith(ttbID: rout.timeTableID){
                 if(i > index){
-                    let newStartTime = calendar.date(byAdding: .second, value: Int(duration), to: time) ?? lastStart
+                    let newStartTime = calendar.date(byAdding: .second, value: Int(duration), to: ajTime) ?? lastStart
 
+                    
                     self.arRoutine[i].startTime = newStartTime
                     self.arRoutine[i].buffStartTime = newStartTime
                     
@@ -485,7 +490,7 @@ extension TimeTableDetailRoutsView:TimeTableRoutineCellDelegate{
                 
                 self.arRoutine[i].endTime = calendar.date(byAdding: .second, value: Int(useTime), to: lastStart) ?? lastStart
                 
-          
+                self.arRoutine[i].strEndTime = self.arRoutine[i].dateToStringTime(date: self.arRoutine[i].endTime!)
                 
                 duration = duration + useTime
             }

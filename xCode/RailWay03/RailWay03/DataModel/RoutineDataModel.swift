@@ -25,7 +25,12 @@ class RoutineDataModel: NSObject {
     var timeTableStatus:TimeTableStatus = .noData
     var startTime:Date = Date()
     var buffStartTime:Date? = nil
+    
+    var strStartTime:String = ""
+    
     var endTime:Date? = nil
+    
+    var strEndTime:String = ""
     
     override init() {
         super.init()
@@ -34,6 +39,11 @@ class RoutineDataModel: NSObject {
         if let d = Calendar.current.date(bySettingHour: 0, minute: 0, second: 1, of: Date()){
             self.startTime = d
             self.buffStartTime = d
+            
+            let dateFormat:DateFormatter = DateFormatter()
+            dateFormat.dateFormat = "HH:mm:ss"
+            dateFormat.calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+            strStartTime = dateFormat.string(from: d)
         }
         
     }
@@ -75,10 +85,19 @@ class RoutineDataModel: NSObject {
         }
         
         self.buffStartTime = self.startTime
+        
+        let dateFormat:DateFormatter = DateFormatter()
+        dateFormat.dateFormat = "HH:mm:ss"
+        dateFormat.calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        strStartTime = dateFormat.string(from: self.startTime)
+        
 
         if let endTimeAt = fields["endTime"] as? String{
             self.endTime = self.stringTimeToDateToday(str: endTimeAt)
+            self.strEndTime = endTimeAt
         }
+        
+        
     }
     
     
@@ -192,5 +211,12 @@ class RoutineDataModel: NSObject {
     }
     
    
+    func dateToStringTime(date:Date)->String{
+        let dateFormat:DateFormatter = DateFormatter()
+        dateFormat.dateFormat = "HH:mm:ss"
+        dateFormat.calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        let str = dateFormat.string(from: date)
+        return str
+    }
     
 }
