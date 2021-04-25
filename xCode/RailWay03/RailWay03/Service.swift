@@ -162,7 +162,7 @@ class Service: NSObject {
             }
             
             
-            socket.on("registerControll"){ data, ack in
+            socket.on("registerControl"){ data, ack in
                 guard let message = data[0] as? [String:Any] else { return }
                 print("registerCar ------")
                 print(message)

@@ -218,9 +218,15 @@ io.on('connect',
         });
 
         socket.on('registerCar', function (data) {
-            console.log('registerCar');
-            console.log(data);
+            // console.log('registerCar');
+            // console.log(data);
             io.emit('registerCar', data);
+        });
+
+        socket.on('registerControl', function (data) {
+            // console.log('registerCar');
+            // console.log(data);
+            io.emit('registerControl', data);
         });
 
 
