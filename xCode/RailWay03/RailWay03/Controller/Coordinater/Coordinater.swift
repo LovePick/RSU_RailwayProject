@@ -66,6 +66,8 @@ class Coordinater: NSObject {
     var arShipControll:[ShipControllModel] = [ShipControllModel]()
     
     
+    var arQuereArrival:[DelayCarArrival] = [DelayCarArrival]()
+    
     private var countUpdateActiveCar:NSInteger = 0
     
     private var countController:NSInteger = 0
@@ -128,8 +130,42 @@ class Coordinater: NSObject {
             arShipControll.append(self.createShipControll(id: "CT05_02"))
             arShipControll.append(self.createShipControll(id: "CT06_01"))
             arShipControll.append(self.createShipControll(id: "CT06_02"))
+            arShipControll.append(self.createShipControll(id: ""))
         }
+        
+        
+        initControlShipLabel()
+        
+        
     }
+    
+    func initControlShipLabel(){
+        
+        print(self.arShipControll.count)
+        if(self.arShipControll.count >= 14){
+            
+            
+            
+            if let ms = ShareData.shared.masterVC{
+                arShipControll[0].label = ms.lbC01
+                arShipControll[1].label = ms.lbC02
+                arShipControll[2].label = ms.lbC03
+                arShipControll[3].label = ms.lbC04
+                arShipControll[4].label = ms.lbC05
+                arShipControll[5].label = ms.lbC06
+                arShipControll[6].label = ms.lbC07
+                arShipControll[7].label = ms.lbC08
+                arShipControll[8].label = ms.lbC09
+                arShipControll[9].label = ms.lbC10
+                arShipControll[10].label = ms.lbC11
+                arShipControll[11].label = ms.lbC12
+                arShipControll[12].label = ms.lbC13
+                arShipControll[13].label = ms.lbC14
+            }
+        }
+        
+    }
+    
     
     func createShipControll(id:String) -> ShipControllModel{
         let newitem = ShipControllModel()
@@ -312,7 +348,13 @@ class Coordinater: NSObject {
             self.registerCars(carName: "")
         }
         
+        
+        self.checkQueueArrival()
+        
+        
         countUpdateActiveCar += 1
+        
+        self.updateControllCount()
     }
     
     
@@ -709,6 +751,8 @@ extension Coordinater:ServiceDelegate{
     }
     func carArrive(carID:String, stationID:String){
         print(">>>>>>carArrive")
+        
+        
         guard let car = self.getCarWith(carID: carID) else {
             print("error1")
             return
@@ -727,14 +771,79 @@ extension Coordinater:ServiceDelegate{
         
         print(">>>>>> \(stationID) >>> to: \(to.id)")
         if(to.id == stationID){
-            self.setStatusCarWith(carID: car.id, status: .arrived)
-            self.myLoop()
+            
+            if(self.mode == .controll){
+                
+                
+                switch stationID.lowercased() {
+                case "b11-a":
+                    addArrivalToQueue(carID: car.id, delay: 2)
+                    break
+                case "b11-b":
+                    addArrivalToQueue(carID: car.id, delay: 2)
+                    break
+                case "b11-c":
+                    addArrivalToQueue(carID: car.id, delay: 2)
+                    break
+                case "b11-d":
+                    addArrivalToQueue(carID: car.id, delay: 2)
+                    break
+                default:
+                    self.setStatusCarWith(carID: car.id, status: .arrived)
+                    break
+                }
+                
+                
+                self.myLoop()
+                
+                
+            }else{
+                self.setStatusCarWith(carID: car.id, status: .arrived)
+                self.myLoop()
+            }
+            
+        
         }else{
 //            self.setStatusCarWith(carID: car.id, status: .error)
         }
         
         
     }
+    
+    
+    func addArrivalToQueue(carID:String, delay:NSInteger){
+        
+        
+        let newItem:DelayCarArrival = DelayCarArrival()
+        newItem.id = carID
+        newItem.delaySec = delay
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        
+        
+        newItem.activeTime = calendar.date(byAdding: .second, value: Int(delay), to: Date()) ?? Date()
+        
+        arQuereArrival.append(newItem)
+    }
+    
+    func checkQueueArrival() {
+        if(arQuereArrival.count > 0){
+            let now = Date()
+            var count = arQuereArrival.count - 1
+            
+            while count <= 0 {
+                let item = arQuereArrival[count]
+                if(now.timeIntervalSinceNow > item.activeTime.timeIntervalSinceNow){
+                    self.setStatusCarWith(carID: item.id, status: .arrived)
+                    self.myLoop()
+                    
+                    arQuereArrival.remove(at: count)
+                }
+                
+                count -= 1
+            }
+        }
+    }
+    
     
     func restartSimulator(){
         guard let mvc = ShareData.shared.masterVC else { return }
@@ -800,8 +909,43 @@ extension Coordinater:ServiceDelegate{
         self.countController = 0
         
         
+        
+        for item in self.arShipControll {
+            if(controllID.lowercased() == item.id.lowercased()){
+                item.countOffline = 0
+                break
+            }
+        }
+    
     }
     
+    func updateControllCount() {
+        var haveOfline = false
+        for item in self.arShipControll {
+            item.updateStatus()
+            item.countOffline += 1
+            if(item.countOffline >= 10){
+                haveOfline = true
+            }
+        }
+        
+        
+        
+        if(haveOfline){
+            if let ms = ShareData.shared.masterVC {
+                
+                if(self.mode == .controll){
+                    if(self.controllStatus == .runing){
+                        ms.tapOnStopCar(ms.btStopCar)
+                    }
+                }
+                
+               
+            }
+        }
+    }
+    
+
    
 }
 

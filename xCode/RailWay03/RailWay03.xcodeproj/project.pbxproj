@@ -74,6 +74,7 @@
 		C132611D24850D89005515B0 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C132611C24850D89005515B0 /* Preferences.storyboard */; };
 		C132611F24850E24005515B0 /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132611E24850E24005515B0 /* PreferenceWindowController.swift */; };
 		C132612124852E97005515B0 /* PreferenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132612024852E97005515B0 /* PreferenceVC.swift */; };
+		C1357BB1263C239E0085BEB2 /* DelayCarArrival.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1357BB0263C239E0085BEB2 /* DelayCarArrival.swift */; };
 		C150CD4724430A1400CB2177 /* ScheduleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C150CD4624430A1400CB2177 /* ScheduleDetailModel.swift */; };
 		C150CD492443120600CB2177 /* CarScheduleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C150CD482443120600CB2177 /* CarScheduleDetailModel.swift */; };
 		C1594EDF2615880F00E5C9E0 /* Usermanual_TH.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C1594EDE2615880F00E5C9E0 /* Usermanual_TH.pdf */; };
@@ -160,6 +161,7 @@
 		C132611C24850D89005515B0 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		C132611E24850E24005515B0 /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
 		C132612024852E97005515B0 /* PreferenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceVC.swift; sourceTree = "<group>"; };
+		C1357BB0263C239E0085BEB2 /* DelayCarArrival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayCarArrival.swift; sourceTree = "<group>"; };
 		C150CD4624430A1400CB2177 /* ScheduleDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailModel.swift; sourceTree = "<group>"; };
 		C150CD482443120600CB2177 /* CarScheduleDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarScheduleDetailModel.swift; sourceTree = "<group>"; };
 		C1594EDE2615880F00E5C9E0 /* Usermanual_TH.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Usermanual_TH.pdf; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				C1F4A7CF2456EDE0008F0CAB /* StationScheduleDataModel.swift */,
 				C10A416D24A09F19008C51BB /* RealmDataRecordModel.swift */,
 				C16C2A66262D4D8600E88048 /* ShipControllModel.swift */,
+				C1357BB0263C239E0085BEB2 /* DelayCarArrival.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				ACA311EE230A5F79007F6109 /* AppDelegate.swift in Sources */,
 				AC06C28C230C0CD8006B32E4 /* GameView.swift in Sources */,
 				AC099AB3230D1CF6009E70CA /* TileCollectionNode.swift in Sources */,
+				C1357BB1263C239E0085BEB2 /* DelayCarArrival.swift in Sources */,
 				AC079B5B230FD11000A5E802 /* CarDataModel.swift in Sources */,
 				C150CD492443120600CB2177 /* CarScheduleDetailModel.swift in Sources */,
 				ACAA7402231794650049A258 /* TimeTableDetailDataModel.swift in Sources */,

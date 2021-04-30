@@ -179,6 +179,21 @@ class ViewController: NSViewController {
     @IBOutlet weak var btStopCar: NSButton!
     
     
+    @IBOutlet weak var viControllStatus: NSView!
+    @IBOutlet weak var lbC01: NSTextField!
+    @IBOutlet weak var lbC02: NSTextField!
+    @IBOutlet weak var lbC03: NSTextField!
+    @IBOutlet weak var lbC04: NSTextField!
+    @IBOutlet weak var lbC05: NSTextField!
+    @IBOutlet weak var lbC06: NSTextField!
+    @IBOutlet weak var lbC07: NSTextField!
+    @IBOutlet weak var lbC08: NSTextField!
+    @IBOutlet weak var lbC09: NSTextField!
+    @IBOutlet weak var lbC10: NSTextField!
+    @IBOutlet weak var lbC11: NSTextField!
+    @IBOutlet weak var lbC12: NSTextField!
+    @IBOutlet weak var lbC13: NSTextField!
+    @IBOutlet weak var lbC14: NSTextField!
     
     
     
@@ -299,6 +314,8 @@ class ViewController: NSViewController {
         self.viControlDisplayStatus.wantsLayer = true
         self.viControlDisplayStatus.isHidden = true
         
+        self.viControllStatus.wantsLayer = true
+        self.viControllStatus.isHidden = true
         
         self.carHorizonLine.layer?.backgroundColor = NSColor.app_space_blue.cgColor
         self.carVerticalLine.layer?.backgroundColor = NSColor.app_space_blue.cgColor
@@ -435,6 +452,7 @@ class ViewController: NSViewController {
     override func viewDidAppear() {
         
         cooldinater.connectServer()
+        cooldinater.initControlShipLabel()
     }
     
     // MARK: - Action

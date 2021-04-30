@@ -98,6 +98,7 @@ class CarDataModel: NSObject {
     var maxSpeed:Double = 0.50
     
     
+    var dewellTimeEnd:Date = Date()
     
     override init() {
         super.init()
@@ -574,6 +575,8 @@ class CarDataModel: NSObject {
                     self.simulatorProgressCount = 0
                     self.simulatorProgressPerStep = coordinator.waitTimeToReRun
                     
+//                    let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+//                    self.dewellTimeEnd = calendar.date(byAdding: .second, value: Int(ttbDetail.dewell), to: Date()) ?? Date()
                     //print("Booking")
                 }else{
                     //print("Wait")
@@ -594,10 +597,13 @@ class CarDataModel: NSObject {
                 
                 
                 if(self.activeStatus == .dewell){
-                    if(simulatorProgressCount >= simulatorProgressFinish){
-                        self.activeStatus = .waitDepart
-                        
+                    
+                    if(Date().timeIntervalSinceNow >= self.dewellTimeEnd.timeIntervalSinceNow){
+                        if(simulatorProgressCount >= simulatorProgressFinish){
+                            self.activeStatus = .waitDepart
+                        }
                     }
+                    
                     simulatorProgressCount += simulatorProgressPerStep
                 }
                 
@@ -670,6 +676,15 @@ class CarDataModel: NSObject {
                     self.activeStatus = self.lastActiveStatus
                 }
                 
+                
+                let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+                self.dewellTimeEnd = calendar.date(byAdding: .second, value: Int(ttbDetail.dewell), to: Date()) ?? Date()
+                
+                print("dewell = \(ttbDetail.dewell)")
+                
+                print(Date().timeIntervalSinceNow)
+                
+                print(self.dewellTimeEnd.timeIntervalSinceNow)
                 
                 self.activeStatus = .dewell
                 

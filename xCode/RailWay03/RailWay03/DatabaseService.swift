@@ -9,7 +9,15 @@
 import Cocoa
 import RealmSwift
 
-
+class BufferLastUpdate {
+    var name:String = ""
+    var time:Date? = nil
+    
+    init(_name:String, _time:Date?) {
+        self.name = _name
+        self.time = _time
+    }
+}
 class DatabaseService {
 
     
@@ -80,6 +88,11 @@ class DatabaseService {
     
     func openDataBase(window:NSWindow) {
 
+        
+        
+        var arBufferLastUpdate:[BufferLastUpdate] = [BufferLastUpdate]()
+        
+        
         guard let realm = self.realm else { return }
         
         let myRecord = realm.objects(RealmDataRecordModel.self).sorted(byKeyPath: "time")
@@ -95,8 +108,36 @@ class DatabaseService {
             
             strData = "\(myRecord[0].getTextHeader())"
             
+            var buffItem:BufferLastUpdate? = nil
             for row in myRecord{
-                strData = "\(strData)\(row.getTextData())"
+                
+                //----
+                var have = false
+                if(arBufferLastUpdate.count > 0){
+                    for b in arBufferLastUpdate{
+                        if b.name.lowercased() == row.train_name.lowercased() {
+                            have = true
+                            buffItem = b
+                            break
+                        }
+                    }
+                }
+                
+                if(have == false){
+                    let newItem = BufferLastUpdate(_name: row.train_name, _time: row.time)
+                    
+                    arBufferLastUpdate.append(newItem)
+                    buffItem = newItem
+                }
+                //----
+                
+                
+                strData = "\(strData)\(row.getTextData(lase: buffItem?.time))"
+                
+                
+                if let buffItem = buffItem{
+                    buffItem.time = row.time
+                }
             }
            
         }

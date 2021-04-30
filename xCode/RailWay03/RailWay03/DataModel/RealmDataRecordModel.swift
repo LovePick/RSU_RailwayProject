@@ -58,6 +58,7 @@ class RealmDataRecordModel: Object {
             break
         }
         
+       
         self.time = Date()
         self.train_id = car.id
         self.train_name = car.name
@@ -76,7 +77,7 @@ class RealmDataRecordModel: Object {
             self.to_station_id = to.id
         }
         
-        let timeDiff = time.timeIntervalSince1970 - car.lastUpdate.timeIntervalSince1970
+        let timeDiff = time.timeIntervalSinceNow - car.lastUpdate.timeIntervalSinceNow
         self.duration = timeDiff
     }
     
@@ -104,7 +105,7 @@ class RealmDataRecordModel: Object {
     }
     
     
-    func getTextData()->String{
+    func getTextData(lase:Date?)->String{
         
         let dateFormat:DateFormatter = DateFormatter()
         dateFormat.dateFormat = "yyyy/MM/dd HH:mm:ss"
@@ -112,7 +113,14 @@ class RealmDataRecordModel: Object {
         
         
         let strData:String = dateFormat.string(from: self.time)
-        let str:String = "\(strData),\(self.train_id),\(self.train_name),\(self.from_station_id),\(self.to_station_id),\(self.status),\(self.time_table_routine_id),\(self.duration),,\n"
+        
+        
+        var newDuration = 0.0
+        
+        if let lase = lase{
+            newDuration = self.time.timeIntervalSinceNow - lase.timeIntervalSinceNow
+        }
+        let str:String = "\(strData),\(self.train_id),\(self.train_name),\(self.from_station_id),\(self.to_station_id),\(self.status),\(self.time_table_routine_id),\(newDuration),,\n"
         
         
         return str

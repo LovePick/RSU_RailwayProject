@@ -7,11 +7,31 @@
 //
 
 import Foundation
+import Cocoa
 
 class ShipControllModel {
     
     
     var id:String = ""
     var countOffline:NSInteger = 10
+    
+    var label:NSTextField? = nil
+    
+    
+    func updateStatus(){
+        
+        
+        guard let lb = self.label else {
+            return
+        }
+        lb.stringValue = id
+        lb.isEditable = false
+        
+        if(countOffline >= 10){
+            lb.textColor = NSColor.app_red
+        }else{
+            lb.textColor = NSColor.app_space_blue
+        }
+    }
     
 }
