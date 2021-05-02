@@ -315,7 +315,7 @@ class ViewController: NSViewController {
         self.viControlDisplayStatus.isHidden = true
         
         self.viControllStatus.wantsLayer = true
-        self.viControllStatus.isHidden = true
+        self.viControllStatus.isHidden = false
         
         self.carHorizonLine.layer?.backgroundColor = NSColor.app_space_blue.cgColor
         self.carVerticalLine.layer?.backgroundColor = NSColor.app_space_blue.cgColor
@@ -444,7 +444,7 @@ class ViewController: NSViewController {
         self.setupEmergencyBreagButton()
         
         
-        
+        self.cooldinater.registerShipControll()
     }
     
     
@@ -1757,18 +1757,18 @@ class ViewController: NSViewController {
     @IBAction func windowPauseRun(_ sender:NSMenu){
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
         
-        let coordinate = Coordinater.shared
+        
     
         
-        if(coordinate.controllStatus == .runing){
+        if(cooldinater.controllStatus == .runing){
             
-            coordinate.stopAll()
-            coordinate.pauseTimer()
+            cooldinater.stopAll()
+            cooldinater.pauseTimer()
             appDelegate.windowControllerPauseContinute.title = "Continue"
             
             self.btStopCar.title = "Continue"
         }else{
-            coordinate.continueSimulator()
+            cooldinater.continueSimulator()
             appDelegate.windowControllerPauseContinute.title = "System Emergency Break"
             
             self.btStopCar.title = "System Emergency Break"
@@ -1777,8 +1777,8 @@ class ViewController: NSViewController {
     
     @IBAction func windowResetRun(_ sender:NSMenu){
         
-        let coordinate = Coordinater.shared
-        coordinate.stopAll()
+        
+        cooldinater.stopAll()
         self.resetController()
         
     }
@@ -1808,13 +1808,13 @@ class ViewController: NSViewController {
     
     func runController(mode:Coordinater.Mode)->Bool{
         
-        let coordinate = Coordinater.shared
+        
         
         for car in self.carListViewDataModel.arCars{
             car.resetRunTime()
         }
         
-        coordinate.runSimulator(cars: self.carListViewDataModel.arCars, inMode: mode)
+        cooldinater.runSimulator(cars: self.carListViewDataModel.arCars, inMode: mode)
         return true
     }
     
@@ -1824,8 +1824,8 @@ class ViewController: NSViewController {
         
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
         
-        let coordinate = Coordinater.shared
-        coordinate.resetSimulater()
+       
+        cooldinater.resetSimulater()
         
         self.showCarsMenu(show: false)
         self.viControlDisplayStatus.isHidden = true
@@ -1956,21 +1956,21 @@ class ViewController: NSViewController {
         
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
         
-        let coordinate = Coordinater.shared
+       
     
         var stopBTTitle:String = "System Emergency Break"
         
-        if(coordinate.controllStatus == .runing){
+        if(cooldinater.controllStatus == .runing){
             
-            coordinate.stopAll()
+            cooldinater.stopAll()
 //            coordinate.pauseTimer()
             
-            coordinate.controllStatus = .emercencyBreak
+            cooldinater.controllStatus = .emercencyBreak
             appDelegate.windowControllerPauseContinute.title = "Continue"
             
             stopBTTitle = "Continue"
         }else{
-            coordinate.continueSimulator()
+            cooldinater.continueSimulator()
             appDelegate.windowControllerPauseContinute.title = "System Emergency Break"
             
         }
@@ -1987,6 +1987,19 @@ class ViewController: NSViewController {
         
     }
     
+    
+    func setDisplayEmergenct() {
+        
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        appDelegate.windowControllerPauseContinute.title = "Continue"
+        
+        let stopBTTitle = "Continue"
+        self.btStopCar.title = stopBTTitle
+        if let mutableAttributedTitle = btStopCar.attributedTitle.mutableCopy() as? NSMutableAttributedString {
+            mutableAttributedTitle.addAttribute(.foregroundColor, value: NSColor.white, range: NSRange(location: 0, length: mutableAttributedTitle.length))
+            btStopCar.attributedTitle = mutableAttributedTitle
+        }
+    }
     
     func setupEmergencyBreagButton(){
         

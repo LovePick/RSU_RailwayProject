@@ -17,6 +17,7 @@ class ShipControllModel {
     
     var label:NSTextField? = nil
     
+    let limitOfline:NSInteger = 2
     
     func updateStatus(){
         
@@ -27,7 +28,7 @@ class ShipControllModel {
         lb.stringValue = id
         lb.isEditable = false
         
-        if(countOffline >= 10){
+        if(countOffline >= limitOfline){
             lb.textColor = NSColor.app_red
         }else{
             lb.textColor = NSColor.app_space_blue

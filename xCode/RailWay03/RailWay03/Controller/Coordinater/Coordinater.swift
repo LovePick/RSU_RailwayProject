@@ -29,6 +29,7 @@ class Coordinater: NSObject {
         case runing
         case stop
         case emercencyBreak
+        case stationOffline
     }
     static let shared = Coordinater()
     
@@ -51,6 +52,7 @@ class Coordinater: NSObject {
     var timer:Timer! = nil
     var timeIntervalCount:TimeInterval = 0
     
+    var timerCheckStatus:Timer! = nil
     
     var mode:Mode = .simulator
     var controllStatus:ControllStatus = .ideal
@@ -75,7 +77,7 @@ class Coordinater: NSObject {
         super.init()
         
         myService.delegate = self
-        self.registerShipControll()
+//        self.registerShipControll()
     }
     
     
@@ -135,7 +137,8 @@ class Coordinater: NSObject {
         
         
         initControlShipLabel()
-        
+        updateControllCount()
+        self.startCheckStatusTimmer()
         
     }
     
@@ -173,6 +176,8 @@ class Coordinater: NSObject {
         newitem.id = id
         return newitem
     }
+    
+    
     
     func startTimer(){
         self.controllStatus = .runing
@@ -342,19 +347,9 @@ class Coordinater: NSObject {
         }
         
         
-        
-        if(countUpdateActiveCar > 5){
-            countUpdateActiveCar = 0
-            self.registerCars(carName: "")
-        }
-        
-        
         self.checkQueueArrival()
         
         
-        countUpdateActiveCar += 1
-        
-        self.updateControllCount()
     }
     
     
@@ -788,6 +783,18 @@ extension Coordinater:ServiceDelegate{
                 case "b11-d":
                     addArrivalToQueue(carID: car.id, delay: 2)
                     break
+                case "tb04":
+                    addArrivalToQueue(carID: car.id, delay: 1)
+                    break
+                case "tb03":
+                    addArrivalToQueue(carID: car.id, delay: 1)
+                    break
+                case "tb05":
+                    addArrivalToQueue(carID: car.id, delay: 1)
+                    break
+                case "tb06":
+                    addArrivalToQueue(carID: car.id, delay: 1)
+                    break
                 default:
                     self.setStatusCarWith(carID: car.id, status: .arrived)
                     break
@@ -830,14 +837,18 @@ extension Coordinater:ServiceDelegate{
             let now = Date()
             var count = arQuereArrival.count - 1
             
-            while count <= 0 {
-                let item = arQuereArrival[count]
-                if(now.timeIntervalSinceNow > item.activeTime.timeIntervalSinceNow){
-                    self.setStatusCarWith(carID: item.id, status: .arrived)
-                    self.myLoop()
-                    
-                    arQuereArrival.remove(at: count)
+            while count >= 0 {
+                
+                if(count < arQuereArrival.count){
+                    let item = arQuereArrival[count]
+                    if(now.timeIntervalSinceNow > item.activeTime.timeIntervalSinceNow){
+                        self.setStatusCarWith(carID: item.id, status: .arrived)
+                        
+                        
+                        arQuereArrival.remove(at: count)
+                    }
                 }
+                
                 
                 count -= 1
             }
@@ -913,6 +924,7 @@ extension Coordinater:ServiceDelegate{
         for item in self.arShipControll {
             if(controllID.lowercased() == item.id.lowercased()){
                 item.countOffline = 0
+                item.updateStatus()
                 break
             }
         }
@@ -922,30 +934,67 @@ extension Coordinater:ServiceDelegate{
     func updateControllCount() {
         var haveOfline = false
         for item in self.arShipControll {
-            item.updateStatus()
+            
             item.countOffline += 1
-            if(item.countOffline >= 10){
+            
+            item.updateStatus()
+            if(item.countOffline >= item.limitOfline){
                 haveOfline = true
             }
         }
         
         
-        
+        /*
         if(haveOfline){
             if let ms = ShareData.shared.masterVC {
                 
                 if(self.mode == .controll){
                     if(self.controllStatus == .runing){
-                        ms.tapOnStopCar(ms.btStopCar)
+                        
+                        self.stopAll()
+                        
+                        self.controllStatus = .emercencyBreak
+                        ms.setDisplayEmergenct()
                     }
                 }
                 
                
             }
-        }
+        }*/
+        
+        
     }
     
 
+    func startCheckStatusTimmer(){
+        if(self.timerCheckStatus != nil){
+            return
+        }
+        
+        
+    
+        self.timerCheckStatus = Timer.scheduledTimer(timeInterval: waitTimeToReRun, target: self, selector: #selector(checkStatusLoop), userInfo: nil, repeats: true)
+    }
+    
+    func stopCheckStatusTimmer(){
+        if(self.timerCheckStatus != nil){
+            self.timerCheckStatus.invalidate()
+        }
+        self.timerCheckStatus = nil
+    }
+    
+    
+    @objc func checkStatusLoop(){
+        
+        self.updateControllCount()
+        
+        if(countUpdateActiveCar > 4){
+            countUpdateActiveCar = 0
+            self.registerCars(carName: "")
+        }
+        countUpdateActiveCar += 1
+        
+    }
    
 }
 

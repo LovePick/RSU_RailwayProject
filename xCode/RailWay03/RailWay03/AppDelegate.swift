@@ -58,7 +58,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
         let coordinate = Coordinater.shared
+        coordinate.stopCheckStatusTimmer()
         coordinate.stopAll()
+        coordinate.pauseTimer()
     }
     
     

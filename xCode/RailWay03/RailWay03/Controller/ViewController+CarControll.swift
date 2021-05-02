@@ -49,7 +49,7 @@ extension ViewController {
             self.btStopCar.isEnabled = true
         }else{
             viCarControll.isHidden = true
-            self.viControllStatus.isHidden = true
+            self.viControllStatus.isHidden = false
             self.removeCarsControllView()
             
             self.viStopCarBG.isHidden = true
