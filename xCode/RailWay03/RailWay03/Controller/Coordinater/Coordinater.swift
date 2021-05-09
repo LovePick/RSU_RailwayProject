@@ -70,7 +70,7 @@ class Coordinater: NSObject {
     
     var arQuereArrival:[DelayCarArrival] = [DelayCarArrival]()
     
-    private var countUpdateActiveCar:NSInteger = 0
+   
     
     private var countController:NSInteger = 0
     override init() {
@@ -353,6 +353,24 @@ class Coordinater: NSObject {
     }
     
     
+    func carWitNextStation(stationID:String)->CarDataModel?{
+        guard let mvc = ShareData.shared.masterVC else { return nil }
+        
+        var carActive:CarDataModel?
+        
+        for car in mvc.activeCars {
+            
+            if let nextStation = car.getNextStation() {
+                if( nextStation.id.lowercased() == stationID.lowercased() ){
+                    carActive = car
+                    break
+                }
+            }
+            
+        }
+        
+        return carActive
+    }
     
     
     
@@ -744,8 +762,22 @@ extension Coordinater:ServiceDelegate{
     func continueCarWith(carID:String){
         self.setStatusCarWith(carID: carID, status: .inProgress)
     }
-    func carArrive(carID:String, stationID:String){
+    
+    
+    
+    
+    
+    func carArrive(acarid:String, stationID:String){
         print(">>>>>>carArrive")
+        
+        var carID = acarid
+        if(carID == ""){
+            if let searchCar = self.carWitNextStation(stationID: stationID) {
+                carID = searchCar.id
+            }else{
+                print("error4")
+            }
+        }
         
         
         guard let car = self.getCarWith(carID: carID) else {
@@ -867,8 +899,6 @@ extension Coordinater:ServiceDelegate{
     
     func registerCars(carName: String) {
         
-       
-        self.countUpdateActiveCar = 0
         
         
         guard let ms = ShareData.shared.masterVC else {
@@ -883,7 +913,7 @@ extension Coordinater:ServiceDelegate{
             
             let last = online.online
             let diff = now.timeIntervalSinceNow - online.lastUpdate.timeIntervalSinceNow
-            if(diff > 6){
+            if(diff >= 5){
                 online.online = false
                 
             }
@@ -988,11 +1018,7 @@ extension Coordinater:ServiceDelegate{
         
         self.updateControllCount()
         
-        if(countUpdateActiveCar > 4){
-            countUpdateActiveCar = 0
-            self.registerCars(carName: "")
-        }
-        countUpdateActiveCar += 1
+        self.registerCars(carName: "")
         
     }
    

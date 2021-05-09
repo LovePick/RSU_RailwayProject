@@ -15,7 +15,7 @@ import WebKit
     @objc optional func getTimeTableWith(stationID:String)
     @objc optional func stopCarWith(carID:String)
     @objc optional func continueCarWith(carID:String)
-    @objc optional func carArrive(carID:String, stationID:String)
+    @objc optional func carArrive(acarid:String, stationID:String)
     @objc optional func restartSimulator()
     @objc optional func registerCars(carName:String)
     @objc optional func registerController(controllID:String)
@@ -225,10 +225,10 @@ class Service: NSObject {
                 }
                 
                 
-                if((strID != "") && (carid != "")){
+                if(strID != ""){
                     print(">>strID:\(strID), carid:\(carid)")
                     if let de = self.delegate{
-                        de.carArrive?(carID: carid, stationID: strID)
+                        de.carArrive?(acarid: carid, stationID: strID)
                     }
                    
                 }

@@ -88,11 +88,8 @@ app.get('/continue/:carId', function (req, res) {
 });
 
 app.get('/arrived/', function (req, res) {
-
     var carId = "";
     var stationId = "";
-
-
     for (const key in req.query) {
         console.log(key, req.query[key])
         if (key == "carId") {
@@ -105,30 +102,44 @@ app.get('/arrived/', function (req, res) {
     }
 
     if ((carId == null) || (carId == undefined) || (carId == 'undefined') || (carId == '')) {
-        return;
+        carId = "";
     }
     if ((stationId == null) || (stationId == undefined) || (stationId == 'undefined') || (stationId == '')) {
+        res.write("0"); //write a response to the client
+        res.end(); //end the response
         return;
     }
-
     //console.log(carId);
-
     var messageOBJ = { carID: carId, stationID: stationId };
     io.emit('arrived', messageOBJ);
 
-    res.sendFile(__dirname + '/cars.html');
+    res.write("1"); //write a response to the client
+    res.end(); //end the response
 
+});
+
+app.get('/registerControl/', function (req, res) {
+    var shipID = "";
+    for (const key in req.query) {
+        console.log(key, req.query[key])
+        if (key == "name") {
+            shipID = req.query[key]
+        }
+    }
+
+    var messageOBJ = { name: shipID };
+    io.emit('registerControl', messageOBJ);
+
+    res.write("1"); //write a response to the client
+    res.end(); //end the response
 });
 
 
 app.get('/restartsim', function (req, res) {
-
-
     var messageObject = { servercommand: 'restart' };
     io.emit('restartsim', messageObject);
 
     res.sendFile(__dirname + '/cars.html');
-
 });
 
 

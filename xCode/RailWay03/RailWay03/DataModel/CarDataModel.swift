@@ -649,6 +649,7 @@ class CarDataModel: NSObject {
                         }
                     }else{
                         
+                        
                         simulatorProgressCount += simulatorProgressPerStep
                         if(simulatorProgressCount >= simulatorProgressFinish){
                             simulatorProgressCount = simulatorProgressFinish - simulatorProgressPerStep
@@ -777,6 +778,8 @@ class CarDataModel: NSObject {
         
         return ans
     }
+    
+    
     
     
     
