@@ -315,7 +315,7 @@ class ViewController: NSViewController {
         self.viControlDisplayStatus.isHidden = true
         
         self.viControllStatus.wantsLayer = true
-        self.viControllStatus.isHidden = false
+        self.viControllStatus.isHidden = true
         
         self.carHorizonLine.layer?.backgroundColor = NSColor.app_space_blue.cgColor
         self.carVerticalLine.layer?.backgroundColor = NSColor.app_space_blue.cgColor

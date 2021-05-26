@@ -538,6 +538,17 @@ class CarDataModel: NSObject {
                     }
                 }
                 
+                for c in coordinator.simulatorCars{
+                    
+                    if let us = c.value.getFromStation(), let ns = self.getNextStation(){
+                        if((us.id == ns.id) && (c.value.activeStatus != .stop)){
+                            allFree = false
+                            break
+                        }
+                    }
+                }
+                
+                
                 // check Queue
                 if(allFree == true){
                     var ready = false
@@ -749,6 +760,10 @@ class CarDataModel: NSObject {
                         }else{
                             self.progressStatus = .end
                             self.activeStatus = .stop
+                            
+                            coordinator.removeBookingPath(path: usePath)
+                            coordinator.removeQueue(carID: self.id)
+                            
                         }
                     }
                 }

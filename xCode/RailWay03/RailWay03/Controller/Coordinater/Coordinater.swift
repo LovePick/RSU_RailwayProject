@@ -94,6 +94,8 @@ class Coordinater: NSObject {
     
     func runSimulator(cars:[CarDataModel], inMode:Mode){
         
+        
+        
         //update car data
         self.mode = inMode
         for car in cars{
@@ -104,6 +106,9 @@ class Coordinater: NSObject {
                 car.inModeSimulator = true
             }
             self.simulatorCars[car.id] = car
+            
+           
+          
         }
         
         if let ms = ShareData.shared.masterVC{

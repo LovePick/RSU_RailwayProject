@@ -21,7 +21,7 @@ class ShareData: NSObject {
     var masterVC:ViewController? = nil
     
     
-    var production:Bool = true
+    var production:Bool = false
    
     
     /*
